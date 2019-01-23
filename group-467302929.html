@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 2</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre></pre>
+
+    <h2>stderr</h2>
+    <pre>Fatal error: exception (Failure sconcat_l)
+Raised at file &quot;stdlib.ml&quot;, line 33, characters 17-33
+Called from file &quot;src/language/fromShell.ml&quot;, line 192, characters 7-24
+Called from file &quot;src/language/fromShell.ml&quot;, line 94, characters 18-50
+Called from file &quot;src/language/fromShell.ml&quot;, line 30, characters 21-26
+Called from file &quot;list.ml&quot;, line 117, characters 24-34
+Called from file &quot;src/language/fromShell.ml&quot;, line 28, characters 2-104
+Called from file &quot;src/language/fromShell.ml&quot;, line 181, characters 4-77
+Called from file &quot;src/language/fromShell.ml&quot;, line 204, characters 26-75
+Called from file &quot;src/language/fromShell.ml&quot;, line 30, characters 21-26
+Called from file &quot;list.ml&quot;, line 117, characters 24-34
+Called from file &quot;src/language/fromShell.ml&quot;, line 28, characters 2-104
+Called from file &quot;src/language/fromShell.ml&quot;, line 237, characters 21-65
+Called from file &quot;src/language/fromShell.ml&quot;, line 306, characters 20-52
+Called from file &quot;src/language/fromShell.ml&quot;, line 94, characters 18-50
+Called from file &quot;src/language/fromShell.ml&quot;, line 347, characters 20-52
+Called from file &quot;src/language/fromShell.ml&quot;, line 94, characters 18-50
+Called from file &quot;src/language/fromShell.ml&quot;, line 30, characters 21-26
+Called from file &quot;list.ml&quot;, line 117, characters 24-34
+Called from file &quot;src/language/fromShell.ml&quot;, line 28, characters 2-104
+Called from file &quot;src/language/fromShell.ml&quot;, line 424, characters 19-70
+Called from file &quot;src/language/fromShell.ml&quot;, line 432, characters 18-60
+Called from file &quot;src/colis_cmd.ml&quot;, line 85, characters 4-138
+Called from file &quot;src/colis_cmd.ml&quot;, line 109, characters 4-11
+</pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/readline-common_7.0-5/postinst</li>
+    </ul>
+  </body>
+</html>
