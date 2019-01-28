@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 8</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre></pre>
+
+    <h2>stderr</h2>
+    <pre>[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₆ ∧ games₆[phalanx.learn]phalanx.learn₇ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]phalanx.learn₇ = phalanx.learn₃ ∧ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₆ ∧ games₆[phalanx.learn]phalanx.learn₇ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ phalanx.learn₈⋅ phalanx.learn₈ = phalanx.learn₃ ∧ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₆ ∧ games₆[phalanx.learn]phalanx.learn₈ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₆ ∧ games₆[phalanx.learn]phalanx.learn₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₆ ∧ games₆[phalanx.learn]phalanx.learn₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         21280055 [shape=rectangle,label=&quot;phalanx.learn₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         90341969 [shape=rectangle,label=&quot;lib₅&quot;];
+         900868118 [shape=rectangle,label=&quot;games₆&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 90341969 [label=&quot;lib&quot;];
+         90341969 -&gt; 900868118 [label=&quot;games&quot;];
+         900868118 -&gt; 21280055 [label=&quot;phalanx.learn&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₉⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₉ ∧ games₉[phalanx.learn]phalanx.learn₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₉⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[games]games₉ ∧ games₉[phalanx.learn]phalanx.learn₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         21280055 [shape=rectangle,label=&quot;phalanx.learn₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         90341969 [shape=rectangle,label=&quot;lib₅&quot;];
+         1035671017 [shape=rectangle,label=&quot;∃games₉&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 90341969 [label=&quot;lib&quot;];
+         90341969 -&gt; 1035671017 [label=&quot;games&quot;];
+         1035671017 -&gt; 21280055 [label=&quot;phalanx.learn&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₉, lib₁₀⋅ r₁[var]var₄ ∧ var₄[lib]lib₁₀ ∧ games₉[phalanx.learn]phalanx.learn₃ ∧ lib₁₀[games]games₉ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₉, lib₁₀⋅ r₁[var]var₄ ∧ var₄[lib]lib₁₀ ∧ games₉[phalanx.learn]phalanx.learn₃ ∧ lib₁₀[games]games₉ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         21280055 [shape=rectangle,label=&quot;phalanx.learn₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         1035671017 [shape=rectangle,label=&quot;∃games₉&quot;];
+         549651965 [shape=rectangle,label=&quot;∃lib₁₀&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 549651965 [label=&quot;lib&quot;];
+         1035671017 -&gt; 21280055 [label=&quot;phalanx.learn&quot;];
+         549651965 -&gt; 1035671017 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₉, lib₁₀, var₁₁⋅ r₁[var]var₁₁ ∧ games₉[phalanx.learn]phalanx.learn₃ ∧ lib₁₀[games]games₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₉, lib₁₀, var₁₁⋅ r₁[var]var₁₁ ∧ games₉[phalanx.learn]phalanx.learn₃ ∧ lib₁₀[games]games₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         21280055 [shape=rectangle,label=&quot;phalanx.learn₃&quot;];
+         1035671017 [shape=rectangle,label=&quot;∃games₉&quot;];
+         549651965 [shape=rectangle,label=&quot;∃lib₁₀&quot;];
+         1036742910 [shape=rectangle,label=&quot;∃var₁₁&quot;];
+         561155517 -&gt; 1036742910 [label=&quot;var&quot;];
+         1035671017 -&gt; 21280055 [label=&quot;phalanx.learn&quot;];
+         549651965 -&gt; 1035671017 [label=&quot;games&quot;];
+         1036742910 -&gt; 549651965 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₉, lib₁₀, var₁₁⋅ r₁ = r₂ ∧ r₁[var]var₁₁ ∧ games₉[phalanx.learn]phalanx.learn₃ ∧ lib₁₀[games]games₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ games₉, lib₁₀, var₁₁, phalanx.learn₁₂⋅ r₁ = r₂ ∧ r₁[var]var₁₁ ∧ games₉[phalanx.learn]phalanx.learn₁₂ ∧ lib₁₀[games]games₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₉, lib₁₀, var₁₁, phalanx.learn₁₂⋅ r₁ = r₂ ∧ r₁[var]var₁₁ ∧ games₉[phalanx.learn]phalanx.learn₁₂ ∧ lib₁₀[games]games₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         1035671017 [shape=rectangle,label=&quot;∃games₉&quot;];
+         549651965 [shape=rectangle,label=&quot;∃lib₁₀&quot;];
+         1036742910 [shape=rectangle,label=&quot;∃var₁₁&quot;];
+         861893511 [shape=rectangle,label=&quot;∃phalanx.learn₁₂&quot;];
+         561155517 -&gt; 1036742910 [label=&quot;var&quot;];
+         1035671017 -&gt; 861893511 [label=&quot;phalanx.learn&quot;];
+         549651965 -&gt; 1035671017 [label=&quot;games&quot;];
+         1036742910 -&gt; 549651965 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ dir(var₁₃)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(games₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₅ ∧ games₁₅[phalanx.learn]phalanx.learn₁₆ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(games₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₅ ∧ games₁₅[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(games₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ ¬ dir(games₁₅)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(games₁₅)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(games₁₅) ∧ games₁₅[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₇⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(games₁₇) ∧ games₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₁₇⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(games₁₇) ∧ games₁₇[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         78122921 [shape=rectangle,label=&quot;lib₁₄ | dir&quot;];
+         173893018 [shape=rectangle,label=&quot;∃games₁₇ | reg | []&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 78122921 [label=&quot;lib&quot;];
+         78122921 -&gt; 173893018 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₈⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₈ ∧ games₁₈[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(games₁₈)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₁₈⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]games₁₈ ∧ games₁₈[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(games₁₈)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         78122921 [shape=rectangle,label=&quot;lib₁₄ | dir&quot;];
+         329588699 [shape=rectangle,label=&quot;∃games₁₈ | [phalanx.learn]↑ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 78122921 [label=&quot;lib&quot;];
+         78122921 -&gt; 329588699 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[games]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ ¬ dir(lib₁₄)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₄)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₄) ∧ lib₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₁₉⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₉ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₉) ∧ lib₁₉[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₁₉⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₉ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₉) ∧ lib₁₉[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         471935268 [shape=rectangle,label=&quot;∃lib₁₉ | reg | []&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 471935268 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₀⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₀ ∧ lib₂₀[games]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₂₀)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₀⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₀ ∧ lib₂₀[games]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₂₀)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         933389886 [shape=rectangle,label=&quot;∃lib₂₀ | [games]↑ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 933389886 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₇, lib₂₁⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₁ ∧ lib₂₁[games]games₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(games₁₇) ∧ dir(lib₂₁) ∧ games₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₁₇, lib₂₁⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₁ ∧ lib₂₁[games]games₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(games₁₇) ∧ dir(lib₂₁) ∧ games₁₇[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         173893018 [shape=rectangle,label=&quot;∃games₁₇ | reg | []&quot;];
+         759490715 [shape=rectangle,label=&quot;∃lib₂₁ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 759490715 [label=&quot;lib&quot;];
+         759490715 -&gt; 173893018 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₈, lib₂₂⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₂ ∧ lib₂₂[games]games₁₈ ∧ games₁₈[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(games₁₈) ∧ dir(lib₂₂)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₁₈, lib₂₂⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₂ ∧ lib₂₂[games]games₁₈ ∧ games₁₈[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(games₁₈) ∧ dir(lib₂₂)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         329588699 [shape=rectangle,label=&quot;∃games₁₈ | [phalanx.learn]↑ | dir&quot;];
+         765087067 [shape=rectangle,label=&quot;∃lib₂₂ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 765087067 [label=&quot;lib&quot;];
+         765087067 -&gt; 329588699 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]↑ ∧ dir(r₁) ∧ dir(var₁₃)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ ¬ dir(var₁₃)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ reg(var₁₃)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ reg(var₁₃) ∧ var₁₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₃⋅ r₁[var]var₂₃ ∧ dir(r₁) ∧ reg(var₂₃) ∧ var₂₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₂₃⋅ r₁[var]var₂₃ ∧ dir(r₁) ∧ reg(var₂₃) ∧ var₂₃[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         906849696 [shape=rectangle,label=&quot;∃var₂₃ | reg | []&quot;];
+         561155517 -&gt; 906849696 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₄⋅ r₁[var]var₂₄ ∧ var₂₄[lib]↑ ∧ dir(r₁) ∧ dir(var₂₄)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₂₄⋅ r₁[var]var₂₄ ∧ var₂₄[lib]↑ ∧ dir(r₁) ∧ dir(var₂₄)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         753953944 [shape=rectangle,label=&quot;∃var₂₄ | [lib]↑ | dir&quot;];
+         561155517 -&gt; 753953944 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₁₉, var₂₅⋅ r₁[var]var₂₅ ∧ var₂₅[lib]lib₁₉ ∧ dir(r₁) ∧ reg(lib₁₉) ∧ dir(var₂₅) ∧ lib₁₉[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₁₉, var₂₅⋅ r₁[var]var₂₅ ∧ var₂₅[lib]lib₁₉ ∧ dir(r₁) ∧ reg(lib₁₉) ∧ dir(var₂₅) ∧ lib₁₉[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         471935268 [shape=rectangle,label=&quot;∃lib₁₉ | reg | []&quot;];
+         400739277 [shape=rectangle,label=&quot;∃var₂₅ | dir&quot;];
+         561155517 -&gt; 400739277 [label=&quot;var&quot;];
+         400739277 -&gt; 471935268 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₀, var₂₆⋅ r₁[var]var₂₆ ∧ var₂₆[lib]lib₂₀ ∧ lib₂₀[games]↑ ∧ dir(r₁) ∧ dir(lib₂₀) ∧ dir(var₂₆)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₀, var₂₆⋅ r₁[var]var₂₆ ∧ var₂₆[lib]lib₂₀ ∧ lib₂₀[games]↑ ∧ dir(r₁) ∧ dir(lib₂₀) ∧ dir(var₂₆)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         933389886 [shape=rectangle,label=&quot;∃lib₂₀ | [games]↑ | dir&quot;];
+         288893043 [shape=rectangle,label=&quot;∃var₂₆ | dir&quot;];
+         561155517 -&gt; 288893043 [label=&quot;var&quot;];
+         288893043 -&gt; 933389886 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₇, lib₂₁, var₂₇⋅ r₁[var]var₂₇ ∧ lib₂₁[games]games₁₇ ∧ var₂₇[lib]lib₂₁ ∧ dir(r₁) ∧ reg(games₁₇) ∧ dir(lib₂₁) ∧ dir(var₂₇) ∧ games₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₁₇, lib₂₁, var₂₇⋅ r₁[var]var₂₇ ∧ lib₂₁[games]games₁₇ ∧ var₂₇[lib]lib₂₁ ∧ dir(r₁) ∧ reg(games₁₇) ∧ dir(lib₂₁) ∧ dir(var₂₇) ∧ games₁₇[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         173893018 [shape=rectangle,label=&quot;∃games₁₇ | reg | []&quot;];
+         759490715 [shape=rectangle,label=&quot;∃lib₂₁ | dir&quot;];
+         354494255 [shape=rectangle,label=&quot;∃var₂₇ | dir&quot;];
+         561155517 -&gt; 354494255 [label=&quot;var&quot;];
+         759490715 -&gt; 173893018 [label=&quot;games&quot;];
+         354494255 -&gt; 759490715 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₈, lib₂₂, var₂₈⋅ r₁[var]var₂₈ ∧ lib₂₂[games]games₁₈ ∧ var₂₈[lib]lib₂₂ ∧ games₁₈[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(games₁₈) ∧ dir(lib₂₂) ∧ dir(var₂₈)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₁₈, lib₂₂, var₂₈⋅ r₁[var]var₂₈ ∧ lib₂₂[games]games₁₈ ∧ var₂₈[lib]lib₂₂ ∧ games₁₈[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(games₁₈) ∧ dir(lib₂₂) ∧ dir(var₂₈)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         329588699 [shape=rectangle,label=&quot;∃games₁₈ | [phalanx.learn]↑ | dir&quot;];
+         765087067 [shape=rectangle,label=&quot;∃lib₂₂ | dir&quot;];
+         1060740340 [shape=rectangle,label=&quot;∃var₂₈ | dir&quot;];
+         561155517 -&gt; 1060740340 [label=&quot;var&quot;];
+         765087067 -&gt; 329588699 [label=&quot;games&quot;];
+         1060740340 -&gt; 765087067 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁) ∧ ¬ dir(r₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]reg(r₁) ∧ dir(r₁)
+[DEBUG]Rule C-Kinds applied
+[DEBUG]⊥
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₃⋅ r₁ = r₂ ∧ r₁[var]var₂₃ ∧ dir(r₁) ∧ reg(var₂₃) ∧ var₂₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₄⋅ r₁ = r₂ ∧ r₁[var]var₂₄ ∧ var₂₄[lib]↑ ∧ dir(r₁) ∧ dir(var₂₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₁₉, var₂₅⋅ r₁ = r₂ ∧ r₁[var]var₂₅ ∧ var₂₅[lib]lib₁₉ ∧ dir(r₁) ∧ reg(lib₁₉) ∧ dir(var₂₅) ∧ lib₁₉[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₀, var₂₆⋅ r₁ = r₂ ∧ r₁[var]var₂₆ ∧ var₂₆[lib]lib₂₀ ∧ lib₂₀[games]↑ ∧ dir(r₁) ∧ dir(lib₂₀) ∧ dir(var₂₆)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₇, lib₂₁, var₂₇⋅ r₁ = r₂ ∧ r₁[var]var₂₇ ∧ lib₂₁[games]games₁₇ ∧ var₂₇[lib]lib₂₁ ∧ dir(r₁) ∧ reg(games₁₇) ∧ dir(lib₂₁) ∧ dir(var₂₇) ∧ games₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ games₁₈, lib₂₂, var₂₈⋅ r₁ = r₂ ∧ r₁[var]var₂₈ ∧ lib₂₂[games]games₁₈ ∧ var₂₈[lib]lib₂₂ ∧ games₁₈[phalanx.learn]↑ ∧ dir(r₁) ∧ dir(games₁₈) ∧ dir(lib₂₂) ∧ dir(var₂₈)
+[DEBUG]Normal form reached.
+Unsupported argument for `test`: !
+</pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/phalanx_22+d051004-14/preinst</li>
+    </ul>
+  </body>
+</html>

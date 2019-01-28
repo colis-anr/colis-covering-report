@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 8</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre></pre>
+
+    <h2>stderr</h2>
+    <pre>[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₄ ∧ usr₄[bin]bin₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₄ ∧ usr₄[bin]bin₅ ∧ bin₅[mkvinfo]mkvinfo₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]mkvinfo₆ = mkvinfo₃ ∧ r₁[usr]usr₄ ∧ usr₄[bin]bin₅ ∧ bin₅[mkvinfo]mkvinfo₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ mkvinfo₇⋅ mkvinfo₇ = mkvinfo₃ ∧ r₁[usr]usr₄ ∧ usr₄[bin]bin₅ ∧ bin₅[mkvinfo]mkvinfo₇ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[usr]usr₄ ∧ usr₄[bin]bin₅ ∧ bin₅[mkvinfo]mkvinfo₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[usr]usr₄ ∧ usr₄[bin]bin₅ ∧ bin₅[mkvinfo]mkvinfo₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         677618358 [shape=rectangle,label=&quot;mkvinfo₃&quot;];
+         925278001 [shape=rectangle,label=&quot;usr₄&quot;];
+         1008209503 [shape=rectangle,label=&quot;bin₅&quot;];
+         561155517 -&gt; 925278001 [label=&quot;usr&quot;];
+         925278001 -&gt; 1008209503 [label=&quot;bin&quot;];
+         1008209503 -&gt; 677618358 [label=&quot;mkvinfo&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ bin₈⋅ r₁[usr]usr₄ ∧ usr₄[bin]bin₈ ∧ bin₈[mkvinfo]mkvinfo₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ bin₈⋅ r₁[usr]usr₄ ∧ usr₄[bin]bin₈ ∧ bin₈[mkvinfo]mkvinfo₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         677618358 [shape=rectangle,label=&quot;mkvinfo₃&quot;];
+         925278001 [shape=rectangle,label=&quot;usr₄&quot;];
+         861512003 [shape=rectangle,label=&quot;∃bin₈&quot;];
+         561155517 -&gt; 925278001 [label=&quot;usr&quot;];
+         925278001 -&gt; 861512003 [label=&quot;bin&quot;];
+         861512003 -&gt; 677618358 [label=&quot;mkvinfo&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ bin₈, usr₉⋅ r₁[usr]usr₉ ∧ bin₈[mkvinfo]mkvinfo₃ ∧ usr₉[bin]bin₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ bin₈, usr₉⋅ r₁[usr]usr₉ ∧ bin₈[mkvinfo]mkvinfo₃ ∧ usr₉[bin]bin₈ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         677618358 [shape=rectangle,label=&quot;mkvinfo₃&quot;];
+         861512003 [shape=rectangle,label=&quot;∃bin₈&quot;];
+         525676272 [shape=rectangle,label=&quot;∃usr₉&quot;];
+         561155517 -&gt; 525676272 [label=&quot;usr&quot;];
+         861512003 -&gt; 677618358 [label=&quot;mkvinfo&quot;];
+         525676272 -&gt; 861512003 [label=&quot;bin&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ bin₈, usr₉⋅ r₁ = r₂ ∧ r₁[usr]usr₉ ∧ bin₈[mkvinfo]mkvinfo₃ ∧ usr₉[bin]bin₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ bin₈, usr₉, mkvinfo₁₀⋅ r₁ = r₂ ∧ r₁[usr]usr₉ ∧ bin₈[mkvinfo]mkvinfo₁₀ ∧ usr₉[bin]bin₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ bin₈, usr₉, mkvinfo₁₀⋅ r₁ = r₂ ∧ r₁[usr]usr₉ ∧ bin₈[mkvinfo]mkvinfo₁₀ ∧ usr₉[bin]bin₈ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         861512003 [shape=rectangle,label=&quot;∃bin₈&quot;];
+         525676272 [shape=rectangle,label=&quot;∃usr₉&quot;];
+         609988523 [shape=rectangle,label=&quot;∃mkvinfo₁₀&quot;];
+         561155517 -&gt; 525676272 [label=&quot;usr&quot;];
+         861512003 -&gt; 609988523 [label=&quot;mkvinfo&quot;];
+         525676272 -&gt; 861512003 [label=&quot;bin&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ dir(r₁) ∧ dir(usr₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₂ ∧ dir(r₁) ∧ dir(usr₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₂ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ dir(bin₁₂)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₂ ∧ bin₁₂[mkvinfo]mkvinfo₁₃ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ dir(bin₁₂)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₂ ∧ bin₁₂[mkvinfo]↑ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ dir(bin₁₂)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₂ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ ¬ dir(bin₁₂)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₂ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ reg(bin₁₂)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₂ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ reg(bin₁₂) ∧ bin₁₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ bin₁₄⋅ r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₄ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ reg(bin₁₄) ∧ bin₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ bin₁₄⋅ r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₄ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ reg(bin₁₄) ∧ bin₁₄[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         336912540 [shape=rectangle,label=&quot;usr₁₁ | dir&quot;];
+         437738509 [shape=rectangle,label=&quot;∃bin₁₄ | reg | []&quot;];
+         561155517 -&gt; 336912540 [label=&quot;usr&quot;];
+         336912540 -&gt; 437738509 [label=&quot;bin&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ bin₁₅⋅ r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₅ ∧ bin₁₅[mkvinfo]↑ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ dir(bin₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ bin₁₅⋅ r₁[usr]usr₁₁ ∧ usr₁₁[bin]bin₁₅ ∧ bin₁₅[mkvinfo]↑ ∧ dir(r₁) ∧ dir(usr₁₁) ∧ dir(bin₁₅)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         336912540 [shape=rectangle,label=&quot;usr₁₁ | dir&quot;];
+         5463284 [shape=rectangle,label=&quot;∃bin₁₅ | [mkvinfo]↑ | dir&quot;];
+         561155517 -&gt; 336912540 [label=&quot;usr&quot;];
+         336912540 -&gt; 5463284 [label=&quot;bin&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ usr₁₁[bin]↑ ∧ dir(r₁) ∧ dir(usr₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]usr₁₁ ∧ dir(r₁) ∧ ¬ dir(usr₁₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[usr]usr₁₁ ∧ dir(r₁) ∧ reg(usr₁₁)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[usr]usr₁₁ ∧ dir(r₁) ∧ reg(usr₁₁) ∧ usr₁₁[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ usr₁₆⋅ r₁[usr]usr₁₆ ∧ dir(r₁) ∧ reg(usr₁₆) ∧ usr₁₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ usr₁₆⋅ r₁[usr]usr₁₆ ∧ dir(r₁) ∧ reg(usr₁₆) ∧ usr₁₆[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         452235862 [shape=rectangle,label=&quot;∃usr₁₆ | reg | []&quot;];
+         561155517 -&gt; 452235862 [label=&quot;usr&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ usr₁₇⋅ r₁[usr]usr₁₇ ∧ usr₁₇[bin]↑ ∧ dir(r₁) ∧ dir(usr₁₇)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ usr₁₇⋅ r₁[usr]usr₁₇ ∧ usr₁₇[bin]↑ ∧ dir(r₁) ∧ dir(usr₁₇)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         167033318 [shape=rectangle,label=&quot;∃usr₁₇ | [bin]↑ | dir&quot;];
+         561155517 -&gt; 167033318 [label=&quot;usr&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ bin₁₄, usr₁₈⋅ r₁[usr]usr₁₈ ∧ usr₁₈[bin]bin₁₄ ∧ dir(r₁) ∧ reg(bin₁₄) ∧ dir(usr₁₈) ∧ bin₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ bin₁₄, usr₁₈⋅ r₁[usr]usr₁₈ ∧ usr₁₈[bin]bin₁₄ ∧ dir(r₁) ∧ reg(bin₁₄) ∧ dir(usr₁₈) ∧ bin₁₄[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         437738509 [shape=rectangle,label=&quot;∃bin₁₄ | reg | []&quot;];
+         756459784 [shape=rectangle,label=&quot;∃usr₁₈ | dir&quot;];
+         561155517 -&gt; 756459784 [label=&quot;usr&quot;];
+         756459784 -&gt; 437738509 [label=&quot;bin&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ bin₁₅, usr₁₉⋅ r₁[usr]usr₁₉ ∧ usr₁₉[bin]bin₁₅ ∧ bin₁₅[mkvinfo]↑ ∧ dir(r₁) ∧ dir(bin₁₅) ∧ dir(usr₁₉)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ bin₁₅, usr₁₉⋅ r₁[usr]usr₁₉ ∧ usr₁₉[bin]bin₁₅ ∧ bin₁₅[mkvinfo]↑ ∧ dir(r₁) ∧ dir(bin₁₅) ∧ dir(usr₁₉)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         5463284 [shape=rectangle,label=&quot;∃bin₁₅ | [mkvinfo]↑ | dir&quot;];
+         826199872 [shape=rectangle,label=&quot;∃usr₁₉ | dir&quot;];
+         561155517 -&gt; 826199872 [label=&quot;usr&quot;];
+         826199872 -&gt; 5463284 [label=&quot;bin&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[usr]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁) ∧ ¬ dir(r₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]reg(r₁) ∧ dir(r₁)
+[DEBUG]Rule C-Kinds applied
+[DEBUG]⊥
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[usr]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ usr₁₆⋅ r₁ = r₂ ∧ r₁[usr]usr₁₆ ∧ dir(r₁) ∧ reg(usr₁₆) ∧ usr₁₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ usr₁₇⋅ r₁ = r₂ ∧ r₁[usr]usr₁₇ ∧ usr₁₇[bin]↑ ∧ dir(r₁) ∧ dir(usr₁₇)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ bin₁₄, usr₁₈⋅ r₁ = r₂ ∧ r₁[usr]usr₁₈ ∧ usr₁₈[bin]bin₁₄ ∧ dir(r₁) ∧ reg(bin₁₄) ∧ dir(usr₁₈) ∧ bin₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ bin₁₅, usr₁₉⋅ r₁ = r₂ ∧ r₁[usr]usr₁₉ ∧ usr₁₉[bin]bin₁₅ ∧ bin₁₅[mkvinfo]↑ ∧ dir(r₁) ∧ dir(bin₁₅) ∧ dir(usr₁₉)
+[DEBUG]Normal form reached.
+Unsupported argument for `test`: -L
+</pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/mkvtoolnix_26.0.0-1/postinst</li>
+    </ul>
+  </body>
+</html>

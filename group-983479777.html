@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 7</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre></pre>
+
+    <h2>stderr</h2>
+    <pre>[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[games]games₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[games]games₅ ∧ games₅[rockdodger.scores]rockdodger.scores₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]rockdodger.scores₆ = rockdodger.scores₃ ∧ r₁[var]var₄ ∧ var₄[games]games₅ ∧ games₅[rockdodger.scores]rockdodger.scores₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ rockdodger.scores₇⋅ rockdodger.scores₇ = rockdodger.scores₃ ∧ r₁[var]var₄ ∧ var₄[games]games₅ ∧ games₅[rockdodger.scores]rockdodger.scores₇ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[var]var₄ ∧ var₄[games]games₅ ∧ games₅[rockdodger.scores]rockdodger.scores₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[var]var₄ ∧ var₄[games]games₅ ∧ games₅[rockdodger.scores]rockdodger.scores₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         380513298 [shape=rectangle,label=&quot;rockdodger.scores₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         560194903 [shape=rectangle,label=&quot;games₅&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 560194903 [label=&quot;games&quot;];
+         560194903 -&gt; 380513298 [label=&quot;rockdodger.scores&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₈⋅ r₁[var]var₄ ∧ var₄[games]games₈ ∧ games₈[rockdodger.scores]rockdodger.scores₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₈⋅ r₁[var]var₄ ∧ var₄[games]games₈ ∧ games₈[rockdodger.scores]rockdodger.scores₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         380513298 [shape=rectangle,label=&quot;rockdodger.scores₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         423172637 [shape=rectangle,label=&quot;∃games₈&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 423172637 [label=&quot;games&quot;];
+         423172637 -&gt; 380513298 [label=&quot;rockdodger.scores&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₈, var₉⋅ r₁[var]var₉ ∧ games₈[rockdodger.scores]rockdodger.scores₃ ∧ var₉[games]games₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₈, var₉⋅ r₁[var]var₉ ∧ games₈[rockdodger.scores]rockdodger.scores₃ ∧ var₉[games]games₈ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         380513298 [shape=rectangle,label=&quot;rockdodger.scores₃&quot;];
+         423172637 [shape=rectangle,label=&quot;∃games₈&quot;];
+         1016268355 [shape=rectangle,label=&quot;∃var₉&quot;];
+         561155517 -&gt; 1016268355 [label=&quot;var&quot;];
+         423172637 -&gt; 380513298 [label=&quot;rockdodger.scores&quot;];
+         1016268355 -&gt; 423172637 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ games₈, var₉⋅ r₁ = r₂ ∧ r₁[var]var₉ ∧ games₈[rockdodger.scores]rockdodger.scores₃ ∧ var₉[games]games₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ games₈, var₉, rockdodger.scores₁₀⋅ r₁ = r₂ ∧ r₁[var]var₉ ∧ games₈[rockdodger.scores]rockdodger.scores₁₀ ∧ var₉[games]games₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ games₈, var₉, rockdodger.scores₁₀⋅ r₁ = r₂ ∧ r₁[var]var₉ ∧ games₈[rockdodger.scores]rockdodger.scores₁₀ ∧ var₉[games]games₈ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         423172637 [shape=rectangle,label=&quot;∃games₈&quot;];
+         1016268355 [shape=rectangle,label=&quot;∃var₉&quot;];
+         1059752628 [shape=rectangle,label=&quot;∃rockdodger.scores₁₀&quot;];
+         561155517 -&gt; 1016268355 [label=&quot;var&quot;];
+         423172637 -&gt; 1059752628 [label=&quot;rockdodger.scores&quot;];
+         1016268355 -&gt; 423172637 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₁ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₁ ∧ dir(r₁) ∧ dir(var₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₁ ∧ var₁₁[games]games₁₂ ∧ dir(r₁) ∧ dir(var₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₁ ∧ var₁₁[games]↑ ∧ dir(r₁) ∧ dir(var₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₁ ∧ dir(r₁) ∧ ¬ dir(var₁₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₁ ∧ dir(r₁) ∧ reg(var₁₁)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₁ ∧ dir(r₁) ∧ reg(var₁₁) ∧ var₁₁[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₁₃⋅ r₁[var]var₁₃ ∧ dir(r₁) ∧ reg(var₁₃) ∧ var₁₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₁₃⋅ r₁[var]var₁₃ ∧ dir(r₁) ∧ reg(var₁₃) ∧ var₁₃[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;∃var₁₃ | reg | []&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₁₄⋅ r₁[var]var₁₄ ∧ var₁₄[games]↑ ∧ dir(r₁) ∧ dir(var₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₁₄⋅ r₁[var]var₁₄ ∧ var₁₄[games]↑ ∧ dir(r₁) ∧ dir(var₁₄)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         715643182 [shape=rectangle,label=&quot;∃var₁₄ | [games]↑ | dir&quot;];
+         561155517 -&gt; 715643182 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁) ∧ ¬ dir(r₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]reg(r₁) ∧ dir(r₁)
+[DEBUG]Rule C-Kinds applied
+[DEBUG]⊥
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₁₃⋅ r₁ = r₂ ∧ r₁[var]var₁₃ ∧ dir(r₁) ∧ reg(var₁₃) ∧ var₁₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₁₄⋅ r₁ = r₂ ∧ r₁[var]var₁₄ ∧ var₁₄[games]↑ ∧ dir(r₁) ∧ dir(var₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₈ ∧ var₁₈[games]games₁₉ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]games₁₉ = games₁₅ ∧ r₁[var]var₁₈ ∧ var₁₈[games]games₁₉ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ games₂₀⋅ games₂₀ = games₁₅ ∧ r₁[var]var₁₈ ∧ var₁₈[games]games₂₀ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[var]var₁₈ ∧ var₁₈[games]games₁₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[var]var₁₈ ∧ var₁₈[games]games₁₅ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅&quot;];
+         770070449 [shape=rectangle,label=&quot;var₁₈&quot;];
+         561155517 -&gt; 770070449 [label=&quot;var&quot;];
+         770070449 -&gt; 856342947 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₁⋅ r₁[var]var₂₁ ∧ var₂₁[games]games₁₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₂₁⋅ r₁[var]var₂₁ ∧ var₂₁[games]games₁₅ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅&quot;];
+         657102433 [shape=rectangle,label=&quot;∃var₂₁&quot;];
+         561155517 -&gt; 657102433 [label=&quot;var&quot;];
+         657102433 -&gt; 856342947 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₁⋅ r₁[var]var₂₁ ∧ var₂₁[games]games₁₅ ∧ dir(r₁) ∧ dir(games₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₁⋅ r₁[var]var₂₁ ∧ var₂₁[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₁⋅ r₁[var]var₂₁ ∧ r₁[var]?₂₂ ∧ var₂₁[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅)
+[DEBUG]Rule S-Feats applied
+[DEBUG]r₁[var]?₂₂ ∧ ?₂₂[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₂[games]?₂₄ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂
+[DEBUG]Rule S-Feats-Glob applied
+[DEBUG]games₁₅ = ?₂₄ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]games₁₅ = ?₂₄ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]?₂₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]games₁₅ = ?₂₄ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]?₂₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]games₁₅ = ?₂₄ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]?₂₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]games₁₅ = ?₂₄ ∧ ?₂₅ = games₁₆ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]?₂₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₆⋅ games₁₅ = ?₂₄ ∧ ?₂₆ = games₁₆ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]?₂₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]Rule S-Eq applied
+[DEBUG]games₁₅ = ?₂₄ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]games₁₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]games₁₅ = ?₂₄ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]games₁₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅ | [rockdodger.scores]↑ | dir&quot;];
+         726215603 [shape=rectangle,label=&quot;games₁₆&quot;];
+         794474537 [shape=rectangle,label=&quot;?₂₂&quot;];
+         1003562129 [shape=rectangle,label=&quot;?₂₃&quot;];
+         208372813 [shape=rectangle,label=&quot;?₂₄&quot;];
+         561155517 -&gt; 794474537 [label=&quot;var&quot;];
+         155345283 -&gt; 1003562129 [label=&quot;var&quot;];
+         794474537 -&gt; 856342947 [label=&quot;games&quot;];
+         1003562129 -&gt; 726215603 [label=&quot;games&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{var}&quot;, style=dashed, arrowhead=none, constraint=false];
+         794474537 -&gt; 1003562129 [label=&quot;∼{games}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₇⋅ games₁₅ = ?₂₇ ∧ r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]games₁₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]games₁₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[var]?₂₂ ∧ r₂[var]?₂₃ ∧ ?₂₂[games]games₁₅ ∧ ?₂₃[games]games₁₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₃
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅ | [rockdodger.scores]↑ | dir&quot;];
+         726215603 [shape=rectangle,label=&quot;games₁₆&quot;];
+         794474537 [shape=rectangle,label=&quot;?₂₂&quot;];
+         1003562129 [shape=rectangle,label=&quot;?₂₃&quot;];
+         561155517 -&gt; 794474537 [label=&quot;var&quot;];
+         155345283 -&gt; 1003562129 [label=&quot;var&quot;];
+         794474537 -&gt; 856342947 [label=&quot;games&quot;];
+         1003562129 -&gt; 726215603 [label=&quot;games&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{var}&quot;, style=dashed, arrowhead=none, constraint=false];
+         794474537 -&gt; 1003562129 [label=&quot;∼{games}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈⋅ r₁[var]?₂₂ ∧ r₂[var]?₂₈ ∧ ?₂₂[games]games₁₅ ∧ ?₂₈[games]games₁₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ ?₂₈⋅ r₁[var]?₂₂ ∧ r₂[var]?₂₈ ∧ ?₂₂[games]games₁₅ ∧ ?₂₈[games]games₁₆ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₂ ~{games} ?₂₈
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅ | [rockdodger.scores]↑ | dir&quot;];
+         726215603 [shape=rectangle,label=&quot;games₁₆&quot;];
+         794474537 [shape=rectangle,label=&quot;?₂₂&quot;];
+         782447142 [shape=rectangle,label=&quot;∃?₂₈&quot;];
+         561155517 -&gt; 794474537 [label=&quot;var&quot;];
+         155345283 -&gt; 782447142 [label=&quot;var&quot;];
+         794474537 -&gt; 856342947 [label=&quot;games&quot;];
+         782447142 -&gt; 726215603 [label=&quot;games&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{var}&quot;, style=dashed, arrowhead=none, constraint=false];
+         794474537 -&gt; 782447142 [label=&quot;∼{games}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ ?₂₈, ?₂₉⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅ | [rockdodger.scores]↑ | dir&quot;];
+         726215603 [shape=rectangle,label=&quot;games₁₆&quot;];
+         782447142 [shape=rectangle,label=&quot;∃?₂₈&quot;];
+         972032762 [shape=rectangle,label=&quot;∃?₂₉&quot;];
+         561155517 -&gt; 972032762 [label=&quot;var&quot;];
+         155345283 -&gt; 782447142 [label=&quot;var&quot;];
+         782447142 -&gt; 726215603 [label=&quot;games&quot;];
+         972032762 -&gt; 856342947 [label=&quot;games&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{var}&quot;, style=dashed, arrowhead=none, constraint=false];
+         972032762 -&gt; 782447142 [label=&quot;∼{games}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₁₆ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ dir(games₁₆) ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₁₆ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ games₁₆[rockdodger.scores]rockdodger.scores₁₇ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ dir(games₁₆) ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₁₆ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ games₁₆[rockdodger.scores]rockdodger.scores₁₇ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ dir(games₁₆) ∧ reg(rockdodger.scores₁₇) ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₁₆ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Rule S-Kind applied
+[DEBUG]∃ ?₂₈, ?₂₉⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ games₁₆[rockdodger.scores]rockdodger.scores₁₇ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ dir(games₁₆) ∧ reg(rockdodger.scores₁₇) ∧ rockdodger.scores₁₇[∅] ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₁₆ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉, rockdodger.scores₃₀⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ games₁₆[rockdodger.scores]rockdodger.scores₃₀ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ dir(games₁₆) ∧ reg(rockdodger.scores₃₀) ∧ rockdodger.scores₃₀[∅] ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₁₆ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ ?₂₈, ?₂₉, rockdodger.scores₃₀⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ games₁₆[rockdodger.scores]rockdodger.scores₃₀ ∧ ?₂₈[games]games₁₆ ∧ ?₂₉[games]games₁₅ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ dir(games₁₆) ∧ reg(rockdodger.scores₃₀) ∧ rockdodger.scores₃₀[∅] ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₁₆ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅ | [rockdodger.scores]↑ | dir&quot;];
+         726215603 [shape=rectangle,label=&quot;games₁₆ | dir&quot;];
+         782447142 [shape=rectangle,label=&quot;∃?₂₈&quot;];
+         972032762 [shape=rectangle,label=&quot;∃?₂₉&quot;];
+         443927711 [shape=rectangle,label=&quot;∃rockdodger.scores₃₀ | reg | []&quot;];
+         561155517 -&gt; 972032762 [label=&quot;var&quot;];
+         155345283 -&gt; 782447142 [label=&quot;var&quot;];
+         726215603 -&gt; 443927711 [label=&quot;rockdodger.scores&quot;];
+         782447142 -&gt; 726215603 [label=&quot;games&quot;];
+         972032762 -&gt; 856342947 [label=&quot;games&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{var}&quot;, style=dashed, arrowhead=none, constraint=false];
+         856342947 -&gt; 726215603 [label=&quot;∼{rockdodger.scores}&quot;, style=dashed, arrowhead=none, constraint=false];
+         972032762 -&gt; 782447142 [label=&quot;∼{games}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉, rockdodger.scores₃₀, games₃₁⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₃₁ ∧ ?₂₉[games]games₁₅ ∧ games₃₁[rockdodger.scores]rockdodger.scores₃₀ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ reg(rockdodger.scores₃₀) ∧ dir(games₃₁) ∧ rockdodger.scores₃₀[∅] ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₃₁ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ ?₂₈, ?₂₉, rockdodger.scores₃₀, games₃₁⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₃₁ ∧ ?₂₉[games]games₁₅ ∧ games₃₁[rockdodger.scores]rockdodger.scores₃₀ ∧ games₁₅[rockdodger.scores]↑ ∧ dir(r₁) ∧ dir(games₁₅) ∧ reg(rockdodger.scores₃₀) ∧ dir(games₃₁) ∧ rockdodger.scores₃₀[∅] ∧ r₁ ~{var} r₂ ∧ games₁₅ ~{rockdodger.scores} games₃₁ ∧ ?₂₉ ~{games} ?₂₈
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         856342947 [shape=rectangle,label=&quot;games₁₅ | [rockdodger.scores]↑ | dir&quot;];
+         782447142 [shape=rectangle,label=&quot;∃?₂₈&quot;];
+         972032762 [shape=rectangle,label=&quot;∃?₂₉&quot;];
+         443927711 [shape=rectangle,label=&quot;∃rockdodger.scores₃₀ | reg | []&quot;];
+         415265894 [shape=rectangle,label=&quot;∃games₃₁ | dir&quot;];
+         561155517 -&gt; 972032762 [label=&quot;var&quot;];
+         155345283 -&gt; 782447142 [label=&quot;var&quot;];
+         782447142 -&gt; 415265894 [label=&quot;games&quot;];
+         972032762 -&gt; 856342947 [label=&quot;games&quot;];
+         415265894 -&gt; 443927711 [label=&quot;rockdodger.scores&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{var}&quot;, style=dashed, arrowhead=none, constraint=false];
+         856342947 -&gt; 415265894 [label=&quot;∼{rockdodger.scores}&quot;, style=dashed, arrowhead=none, constraint=false];
+         972032762 -&gt; 782447142 [label=&quot;∼{games}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ ?₂₈, ?₂₉, rockdodger.scores₃₀, games₃₁, games₃₂⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₃₁ ∧ ?₂₉[games]games₃₂ ∧ games₃₁[rockdodger.scores]rockdodger.scores₃₀ ∧ games₃₂[rockdodger.scores]↑ ∧ dir(r₁) ∧ reg(rockdodger.scores₃₀) ∧ dir(games₃₁) ∧ dir(games₃₂) ∧ rockdodger.scores₃₀[∅] ∧ r₁ ~{var} r₂ ∧ ?₂₉ ~{games} ?₂₈ ∧ games₃₂ ~{rockdodger.scores} games₃₁
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ ?₂₈, ?₂₉, rockdodger.scores₃₀, games₃₁, games₃₂⋅ r₁[var]?₂₉ ∧ r₂[var]?₂₈ ∧ ?₂₈[games]games₃₁ ∧ ?₂₉[games]games₃₂ ∧ games₃₁[rockdodger.scores]rockdodger.scores₃₀ ∧ games₃₂[rockdodger.scores]↑ ∧ dir(r₁) ∧ reg(rockdodger.scores₃₀) ∧ dir(games₃₁) ∧ dir(games₃₂) ∧ rockdodger.scores₃₀[∅] ∧ r₁ ~{var} r₂ ∧ ?₂₉ ~{games} ?₂₈ ∧ games₃₂ ~{rockdodger.scores} games₃₁
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         782447142 [shape=rectangle,label=&quot;∃?₂₈&quot;];
+         972032762 [shape=rectangle,label=&quot;∃?₂₉&quot;];
+         443927711 [shape=rectangle,label=&quot;∃rockdodger.scores₃₀ | reg | []&quot;];
+         415265894 [shape=rectangle,label=&quot;∃games₃₁ | dir&quot;];
+         674603409 [shape=rectangle,label=&quot;∃games₃₂ | [rockdodger.scores]↑ | dir&quot;];
+         561155517 -&gt; 972032762 [label=&quot;var&quot;];
+         155345283 -&gt; 782447142 [label=&quot;var&quot;];
+         782447142 -&gt; 415265894 [label=&quot;games&quot;];
+         972032762 -&gt; 674603409 [label=&quot;games&quot;];
+         415265894 -&gt; 443927711 [label=&quot;rockdodger.scores&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{var}&quot;, style=dashed, arrowhead=none, constraint=false];
+         972032762 -&gt; 782447142 [label=&quot;∼{games}&quot;, style=dashed, arrowhead=none, constraint=false];
+         674603409 -&gt; 415265894 [label=&quot;∼{rockdodger.scores}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₃₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₃₄ ∧ var₃₄[games]games₃₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]games₃₅ = games₃₃ ∧ r₁[var]var₃₄ ∧ var₃₄[games]games₃₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ games₃₆⋅ games₃₆ = games₃₃ ∧ r₁[var]var₃₄ ∧ var₃₄[games]games₃₆ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[var]var₃₄ ∧ var₃₄[games]games₃₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[var]var₃₄ ∧ var₃₄[games]games₃₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         255622280 [shape=rectangle,label=&quot;games₃₃&quot;];
+         322295933 [shape=rectangle,label=&quot;var₃₄&quot;];
+         561155517 -&gt; 322295933 [label=&quot;var&quot;];
+         322295933 -&gt; 255622280 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₇⋅ r₁[var]var₃₇ ∧ var₃₇[games]games₃₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₃₇⋅ r₁[var]var₃₇ ∧ var₃₇[games]games₃₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         255622280 [shape=rectangle,label=&quot;games₃₃&quot;];
+         822984157 [shape=rectangle,label=&quot;∃var₃₇&quot;];
+         561155517 -&gt; 822984157 [label=&quot;var&quot;];
+         822984157 -&gt; 255622280 [label=&quot;games&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₇⋅ r₁[var]var₃₇ ∧ var₃₇[games]games₃₃ ∧ dir(r₁) ∧ ¬ dir(games₃₃)
+[DEBUG]Rule R-NKind applied
+[DEBUG]∃ var₃₇⋅ r₁[var]var₃₇ ∧ var₃₇[games]games₃₃ ∧ dir(r₁) ∧ reg(games₃₃)
+[DEBUG]Rule S-Kind applied
+[DEBUG]∃ var₃₇⋅ r₁[var]var₃₇ ∧ var₃₇[games]games₃₃ ∧ dir(r₁) ∧ reg(games₃₃) ∧ games₃₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₇⋅ r₁ = r₂ ∧ r₁[var]var₃₇ ∧ var₃₇[games]games₃₃ ∧ dir(r₁) ∧ reg(games₃₃) ∧ games₃₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₇, games₃₈⋅ r₁ = r₂ ∧ r₁[var]var₃₇ ∧ var₃₇[games]games₃₈ ∧ dir(r₁) ∧ reg(games₃₈) ∧ games₃₈[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₃₇, games₃₈⋅ r₁ = r₂ ∧ r₁[var]var₃₇ ∧ var₃₇[games]games₃₈ ∧ dir(r₁) ∧ reg(games₃₈) ∧ games₃₈[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         822984157 [shape=rectangle,label=&quot;∃var₃₇&quot;];
+         929507510 [shape=rectangle,label=&quot;∃games₃₈ | reg | []&quot;];
+         561155517 -&gt; 822984157 [label=&quot;var&quot;];
+         822984157 -&gt; 929507510 [label=&quot;games&quot;];
+         }
+Unsupported utility: chmod
+</pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/rockdodger_1.1.2-1/postinst</li>
+    </ul>
+  </body>
+</html>

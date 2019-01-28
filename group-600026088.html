@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 7</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre></pre>
+
+    <h2>stderr</h2>
+    <pre>[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₄ ∧ etc₄[redis]redis₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₄ ∧ etc₄[redis]redis₅ ∧ redis₅[redis-openvas.conf]redis-openvas.conf₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]redis-openvas.conf₆ = redis-openvas.conf₃ ∧ r₁[etc]etc₄ ∧ etc₄[redis]redis₅ ∧ redis₅[redis-openvas.conf]redis-openvas.conf₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ redis-openvas.conf₇⋅ redis-openvas.conf₇ = redis-openvas.conf₃ ∧ r₁[etc]etc₄ ∧ etc₄[redis]redis₅ ∧ redis₅[redis-openvas.conf]redis-openvas.conf₇ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[etc]etc₄ ∧ etc₄[redis]redis₅ ∧ redis₅[redis-openvas.conf]redis-openvas.conf₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[etc]etc₄ ∧ etc₄[redis]redis₅ ∧ redis₅[redis-openvas.conf]redis-openvas.conf₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         432102042 [shape=rectangle,label=&quot;redis-openvas.conf₃&quot;];
+         596074592 [shape=rectangle,label=&quot;etc₄&quot;];
+         155282665 [shape=rectangle,label=&quot;redis₅&quot;];
+         561155517 -&gt; 596074592 [label=&quot;etc&quot;];
+         596074592 -&gt; 155282665 [label=&quot;redis&quot;];
+         155282665 -&gt; 432102042 [label=&quot;redis-openvas.conf&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ redis₈⋅ r₁[etc]etc₄ ∧ etc₄[redis]redis₈ ∧ redis₈[redis-openvas.conf]redis-openvas.conf₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ redis₈⋅ r₁[etc]etc₄ ∧ etc₄[redis]redis₈ ∧ redis₈[redis-openvas.conf]redis-openvas.conf₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         432102042 [shape=rectangle,label=&quot;redis-openvas.conf₃&quot;];
+         596074592 [shape=rectangle,label=&quot;etc₄&quot;];
+         988370183 [shape=rectangle,label=&quot;∃redis₈&quot;];
+         561155517 -&gt; 596074592 [label=&quot;etc&quot;];
+         596074592 -&gt; 988370183 [label=&quot;redis&quot;];
+         988370183 -&gt; 432102042 [label=&quot;redis-openvas.conf&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ redis₈, etc₉⋅ r₁[etc]etc₉ ∧ redis₈[redis-openvas.conf]redis-openvas.conf₃ ∧ etc₉[redis]redis₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ redis₈, etc₉⋅ r₁[etc]etc₉ ∧ redis₈[redis-openvas.conf]redis-openvas.conf₃ ∧ etc₉[redis]redis₈ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         432102042 [shape=rectangle,label=&quot;redis-openvas.conf₃&quot;];
+         988370183 [shape=rectangle,label=&quot;∃redis₈&quot;];
+         88993144 [shape=rectangle,label=&quot;∃etc₉&quot;];
+         561155517 -&gt; 88993144 [label=&quot;etc&quot;];
+         988370183 -&gt; 432102042 [label=&quot;redis-openvas.conf&quot;];
+         88993144 -&gt; 988370183 [label=&quot;redis&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ redis₈, etc₉⋅ r₁ = r₂ ∧ r₁[etc]etc₉ ∧ redis₈[redis-openvas.conf]redis-openvas.conf₃ ∧ etc₉[redis]redis₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ redis₈, etc₉, redis-openvas.conf₁₀⋅ r₁ = r₂ ∧ r₁[etc]etc₉ ∧ redis₈[redis-openvas.conf]redis-openvas.conf₁₀ ∧ etc₉[redis]redis₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ redis₈, etc₉, redis-openvas.conf₁₀⋅ r₁ = r₂ ∧ r₁[etc]etc₉ ∧ redis₈[redis-openvas.conf]redis-openvas.conf₁₀ ∧ etc₉[redis]redis₈ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         988370183 [shape=rectangle,label=&quot;∃redis₈&quot;];
+         88993144 [shape=rectangle,label=&quot;∃etc₉&quot;];
+         134872013 [shape=rectangle,label=&quot;∃redis-openvas.conf₁₀&quot;];
+         561155517 -&gt; 88993144 [label=&quot;etc&quot;];
+         988370183 -&gt; 134872013 [label=&quot;redis-openvas.conf&quot;];
+         88993144 -&gt; 988370183 [label=&quot;redis&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ dir(r₁) ∧ dir(etc₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₂ ∧ dir(r₁) ∧ dir(etc₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₂ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ dir(redis₁₂)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₂ ∧ redis₁₂[redis-openvas.conf]redis-openvas.conf₁₃ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ dir(redis₁₂)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₂ ∧ redis₁₂[redis-openvas.conf]↑ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ dir(redis₁₂)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₂ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ ¬ dir(redis₁₂)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₂ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ reg(redis₁₂)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₂ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ reg(redis₁₂) ∧ redis₁₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ redis₁₄⋅ r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₄ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ reg(redis₁₄) ∧ redis₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ redis₁₄⋅ r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₄ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ reg(redis₁₄) ∧ redis₁₄[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         778411764 [shape=rectangle,label=&quot;etc₁₁ | dir&quot;];
+         979700425 [shape=rectangle,label=&quot;∃redis₁₄ | reg | []&quot;];
+         561155517 -&gt; 778411764 [label=&quot;etc&quot;];
+         778411764 -&gt; 979700425 [label=&quot;redis&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ redis₁₅⋅ r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₅ ∧ redis₁₅[redis-openvas.conf]↑ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ dir(redis₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ redis₁₅⋅ r₁[etc]etc₁₁ ∧ etc₁₁[redis]redis₁₅ ∧ redis₁₅[redis-openvas.conf]↑ ∧ dir(r₁) ∧ dir(etc₁₁) ∧ dir(redis₁₅)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         778411764 [shape=rectangle,label=&quot;etc₁₁ | dir&quot;];
+         1049897404 [shape=rectangle,label=&quot;∃redis₁₅ | [redis-openvas.conf]↑ | dir&quot;];
+         561155517 -&gt; 778411764 [label=&quot;etc&quot;];
+         778411764 -&gt; 1049897404 [label=&quot;redis&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ etc₁₁[redis]↑ ∧ dir(r₁) ∧ dir(etc₁₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]etc₁₁ ∧ dir(r₁) ∧ ¬ dir(etc₁₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[etc]etc₁₁ ∧ dir(r₁) ∧ reg(etc₁₁)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[etc]etc₁₁ ∧ dir(r₁) ∧ reg(etc₁₁) ∧ etc₁₁[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ etc₁₆⋅ r₁[etc]etc₁₆ ∧ dir(r₁) ∧ reg(etc₁₆) ∧ etc₁₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ etc₁₆⋅ r₁[etc]etc₁₆ ∧ dir(r₁) ∧ reg(etc₁₆) ∧ etc₁₆[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         425067608 [shape=rectangle,label=&quot;∃etc₁₆ | reg | []&quot;];
+         561155517 -&gt; 425067608 [label=&quot;etc&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ etc₁₇⋅ r₁[etc]etc₁₇ ∧ etc₁₇[redis]↑ ∧ dir(r₁) ∧ dir(etc₁₇)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ etc₁₇⋅ r₁[etc]etc₁₇ ∧ etc₁₇[redis]↑ ∧ dir(r₁) ∧ dir(etc₁₇)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         451746467 [shape=rectangle,label=&quot;∃etc₁₇ | [redis]↑ | dir&quot;];
+         561155517 -&gt; 451746467 [label=&quot;etc&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ redis₁₄, etc₁₈⋅ r₁[etc]etc₁₈ ∧ etc₁₈[redis]redis₁₄ ∧ dir(r₁) ∧ reg(redis₁₄) ∧ dir(etc₁₈) ∧ redis₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ redis₁₄, etc₁₈⋅ r₁[etc]etc₁₈ ∧ etc₁₈[redis]redis₁₄ ∧ dir(r₁) ∧ reg(redis₁₄) ∧ dir(etc₁₈) ∧ redis₁₄[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         979700425 [shape=rectangle,label=&quot;∃redis₁₄ | reg | []&quot;];
+         1020870280 [shape=rectangle,label=&quot;∃etc₁₈ | dir&quot;];
+         561155517 -&gt; 1020870280 [label=&quot;etc&quot;];
+         1020870280 -&gt; 979700425 [label=&quot;redis&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ redis₁₅, etc₁₉⋅ r₁[etc]etc₁₉ ∧ etc₁₉[redis]redis₁₅ ∧ redis₁₅[redis-openvas.conf]↑ ∧ dir(r₁) ∧ dir(redis₁₅) ∧ dir(etc₁₉)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ redis₁₅, etc₁₉⋅ r₁[etc]etc₁₉ ∧ etc₁₉[redis]redis₁₅ ∧ redis₁₅[redis-openvas.conf]↑ ∧ dir(r₁) ∧ dir(redis₁₅) ∧ dir(etc₁₉)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         1049897404 [shape=rectangle,label=&quot;∃redis₁₅ | [redis-openvas.conf]↑ | dir&quot;];
+         543569640 [shape=rectangle,label=&quot;∃etc₁₉ | dir&quot;];
+         561155517 -&gt; 543569640 [label=&quot;etc&quot;];
+         543569640 -&gt; 1049897404 [label=&quot;redis&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[etc]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁) ∧ ¬ dir(r₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]reg(r₁) ∧ dir(r₁)
+[DEBUG]Rule C-Kinds applied
+[DEBUG]⊥
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[etc]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ etc₁₆⋅ r₁ = r₂ ∧ r₁[etc]etc₁₆ ∧ dir(r₁) ∧ reg(etc₁₆) ∧ etc₁₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ etc₁₇⋅ r₁ = r₂ ∧ r₁[etc]etc₁₇ ∧ etc₁₇[redis]↑ ∧ dir(r₁) ∧ dir(etc₁₇)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ redis₁₄, etc₁₈⋅ r₁ = r₂ ∧ r₁[etc]etc₁₈ ∧ etc₁₈[redis]redis₁₄ ∧ dir(r₁) ∧ reg(redis₁₄) ∧ dir(etc₁₈) ∧ redis₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ redis₁₅, etc₁₉⋅ r₁ = r₂ ∧ r₁[etc]etc₁₉ ∧ etc₁₉[redis]redis₁₅ ∧ redis₁₅[redis-openvas.conf]↑ ∧ dir(r₁) ∧ dir(redis₁₅) ∧ dir(etc₁₉)
+[DEBUG]Normal form reached.
+Unsupported utility: chown
+</pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/openvas-scanner_5.1.3-2/postinst</li>
+    </ul>
+  </body>
+</html>

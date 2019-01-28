@@ -41,7 +41,7 @@
 
     <dl>
       <dt>Status</dt>
-      <dd>Exited 0</dd>
+      <dd>Exited 1</dd>
 
       <dt>Number of files</dt>
       <dd>1</dd>
@@ -49,14 +49,13 @@
 
     <h2>stdout</h2>
     <pre>* Initial state
-
 - id: init-0
   root: r₁
   cwd: /
   clause: dir(r₁)
   
-* Success states
 
+* Success states
 - id: success-1
   root: r₂
   cwd: /
@@ -71,8 +70,8 @@
   stdout: |
     [UTL] touch /run/crond.reboot: create file
     
-* Failure states
 
+* Failure states
 - id: failure-1
   root: r₂
   cwd: /
@@ -87,6 +86,7 @@
   stdout: |
     [UTL] touch /run/crond.reboot: parent path is not directory
     
+
 * Summary
 
 - Success cases: 2
@@ -94,7 +94,261 @@
 </pre>
 
     <h2>stderr</h2>
-    <pre></pre>
+    <pre>[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₄ ∧ run₄[crond.reboot]crond.reboot₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]crond.reboot₅ = crond.reboot₃ ∧ r₁[run]run₄ ∧ run₄[crond.reboot]crond.reboot₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ crond.reboot₆⋅ crond.reboot₆ = crond.reboot₃ ∧ r₁[run]run₄ ∧ run₄[crond.reboot]crond.reboot₆ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[run]run₄ ∧ run₄[crond.reboot]crond.reboot₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[run]run₄ ∧ run₄[crond.reboot]crond.reboot₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         656578875 [shape=rectangle,label=&quot;crond.reboot₃&quot;];
+         665038797 [shape=rectangle,label=&quot;run₄&quot;];
+         561155517 -&gt; 665038797 [label=&quot;run&quot;];
+         665038797 -&gt; 656578875 [label=&quot;crond.reboot&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ run₇⋅ r₁[run]run₇ ∧ run₇[crond.reboot]crond.reboot₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ run₇⋅ r₁[run]run₇ ∧ run₇[crond.reboot]crond.reboot₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         656578875 [shape=rectangle,label=&quot;crond.reboot₃&quot;];
+         741805069 [shape=rectangle,label=&quot;∃run₇&quot;];
+         561155517 -&gt; 741805069 [label=&quot;run&quot;];
+         741805069 -&gt; 656578875 [label=&quot;crond.reboot&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ run₇⋅ r₁ = r₂ ∧ r₁[run]run₇ ∧ run₇[crond.reboot]crond.reboot₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ run₇, crond.reboot₈⋅ r₁ = r₂ ∧ r₁[run]run₇ ∧ run₇[crond.reboot]crond.reboot₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ run₇, crond.reboot₈⋅ r₁ = r₂ ∧ r₁[run]run₇ ∧ run₇[crond.reboot]crond.reboot₈ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         741805069 [shape=rectangle,label=&quot;∃run₇&quot;];
+         822533929 [shape=rectangle,label=&quot;∃crond.reboot₈&quot;];
+         561155517 -&gt; 741805069 [label=&quot;run&quot;];
+         741805069 -&gt; 822533929 [label=&quot;crond.reboot&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₉ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁) ∧ ¬ dir(r₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]reg(r₁) ∧ dir(r₁)
+[DEBUG]Rule C-Kinds applied
+[DEBUG]⊥
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[run]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]run₁₃ = run₁₀ ∧ r₁[run]run₁₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ run₁₄⋅ run₁₄ = run₁₀ ∧ r₁[run]run₁₄ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[run]run₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[run]run₁₀ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         71323494 [shape=rectangle,label=&quot;run₁₀&quot;];
+         561155517 -&gt; 71323494 [label=&quot;run&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₀ ∧ dir(r₁) ∧ dir(run₁₀)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₀ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₀ ∧ r₁[run]?₁₅ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀)
+[DEBUG]Rule S-Feats-Glob applied
+[DEBUG]run₁₀ = ?₁₅ ∧ r₁[run]run₁₀ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]run₁₀ = ?₁₅ ∧ r₁[run]run₁₀ ∧ r₂[run]?₁₆ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]run₁₀ = ?₁₅ ∧ r₁[run]run₁₀ ∧ r₂[run]?₁₆ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]run₁₀ = ?₁₅ ∧ r₁[run]run₁₀ ∧ r₂[run]?₁₆ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]run₁₀ = ?₁₅ ∧ ?₁₆ = run₁₁ ∧ r₁[run]run₁₀ ∧ r₂[run]?₁₆ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ ?₁₇⋅ run₁₀ = ?₁₅ ∧ ?₁₇ = run₁₁ ∧ r₁[run]run₁₀ ∧ r₂[run]?₁₇ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]Rule S-Eq applied
+[DEBUG]run₁₀ = ?₁₅ ∧ r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]run₁₀ = ?₁₅ ∧ r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         71323494 [shape=rectangle,label=&quot;run₁₀ | [crond.reboot]↑ | dir&quot;];
+         852403549 [shape=rectangle,label=&quot;run₁₁&quot;];
+         472750465 [shape=rectangle,label=&quot;?₁₅&quot;];
+         561155517 -&gt; 71323494 [label=&quot;run&quot;];
+         155345283 -&gt; 852403549 [label=&quot;run&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{run}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ ?₁₈⋅ run₁₀ = ?₁₈ ∧ r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         71323494 [shape=rectangle,label=&quot;run₁₀ | [crond.reboot]↑ | dir&quot;];
+         852403549 [shape=rectangle,label=&quot;run₁₁&quot;];
+         561155517 -&gt; 71323494 [label=&quot;run&quot;];
+         155345283 -&gt; 852403549 [label=&quot;run&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{run}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₁₁
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ dir(run₁₁) ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₁₁
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₁[crond.reboot]crond.reboot₁₂ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ dir(run₁₁) ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₁₁
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₁[crond.reboot]crond.reboot₁₂ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ dir(run₁₁) ∧ reg(crond.reboot₁₂) ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₁₁
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₁[crond.reboot]crond.reboot₁₂ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ dir(run₁₁) ∧ reg(crond.reboot₁₂) ∧ crond.reboot₁₂[∅] ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₁₁
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ crond.reboot₁₉⋅ r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₁[crond.reboot]crond.reboot₁₉ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ dir(run₁₁) ∧ reg(crond.reboot₁₉) ∧ crond.reboot₁₉[∅] ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₁₁
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ crond.reboot₁₉⋅ r₁[run]run₁₀ ∧ r₂[run]run₁₁ ∧ run₁₁[crond.reboot]crond.reboot₁₉ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ dir(run₁₁) ∧ reg(crond.reboot₁₉) ∧ crond.reboot₁₉[∅] ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₁₁
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         71323494 [shape=rectangle,label=&quot;run₁₀ | [crond.reboot]↑ | dir&quot;];
+         852403549 [shape=rectangle,label=&quot;run₁₁ | dir&quot;];
+         168785358 [shape=rectangle,label=&quot;∃crond.reboot₁₉ | reg | []&quot;];
+         561155517 -&gt; 71323494 [label=&quot;run&quot;];
+         155345283 -&gt; 852403549 [label=&quot;run&quot;];
+         852403549 -&gt; 168785358 [label=&quot;crond.reboot&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{run}&quot;, style=dashed, arrowhead=none, constraint=false];
+         71323494 -&gt; 852403549 [label=&quot;∼{crond.reboot}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ crond.reboot₁₉, run₂₀⋅ r₁[run]run₁₀ ∧ r₂[run]run₂₀ ∧ run₂₀[crond.reboot]crond.reboot₁₉ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ reg(crond.reboot₁₉) ∧ dir(run₂₀) ∧ crond.reboot₁₉[∅] ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₂₀
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ crond.reboot₁₉, run₂₀⋅ r₁[run]run₁₀ ∧ r₂[run]run₂₀ ∧ run₂₀[crond.reboot]crond.reboot₁₉ ∧ run₁₀[crond.reboot]↑ ∧ dir(r₁) ∧ dir(run₁₀) ∧ reg(crond.reboot₁₉) ∧ dir(run₂₀) ∧ crond.reboot₁₉[∅] ∧ r₁ ~{run} r₂ ∧ run₁₀ ~{crond.reboot} run₂₀
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         71323494 [shape=rectangle,label=&quot;run₁₀ | [crond.reboot]↑ | dir&quot;];
+         168785358 [shape=rectangle,label=&quot;∃crond.reboot₁₉ | reg | []&quot;];
+         545316264 [shape=rectangle,label=&quot;∃run₂₀ | dir&quot;];
+         561155517 -&gt; 71323494 [label=&quot;run&quot;];
+         155345283 -&gt; 545316264 [label=&quot;run&quot;];
+         545316264 -&gt; 168785358 [label=&quot;crond.reboot&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{run}&quot;, style=dashed, arrowhead=none, constraint=false];
+         71323494 -&gt; 545316264 [label=&quot;∼{crond.reboot}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ crond.reboot₁₉, run₂₀, run₂₁⋅ r₁[run]run₂₁ ∧ r₂[run]run₂₀ ∧ run₂₀[crond.reboot]crond.reboot₁₉ ∧ run₂₁[crond.reboot]↑ ∧ dir(r₁) ∧ reg(crond.reboot₁₉) ∧ dir(run₂₀) ∧ dir(run₂₁) ∧ crond.reboot₁₉[∅] ∧ r₁ ~{run} r₂ ∧ run₂₁ ~{crond.reboot} run₂₀
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ crond.reboot₁₉, run₂₀, run₂₁⋅ r₁[run]run₂₁ ∧ r₂[run]run₂₀ ∧ run₂₀[crond.reboot]crond.reboot₁₉ ∧ run₂₁[crond.reboot]↑ ∧ dir(r₁) ∧ reg(crond.reboot₁₉) ∧ dir(run₂₀) ∧ dir(run₂₁) ∧ crond.reboot₁₉[∅] ∧ r₁ ~{run} r₂ ∧ run₂₁ ~{crond.reboot} run₂₀
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         168785358 [shape=rectangle,label=&quot;∃crond.reboot₁₉ | reg | []&quot;];
+         545316264 [shape=rectangle,label=&quot;∃run₂₀ | dir&quot;];
+         170621436 [shape=rectangle,label=&quot;∃run₂₁ | [crond.reboot]↑ | dir&quot;];
+         561155517 -&gt; 170621436 [label=&quot;run&quot;];
+         155345283 -&gt; 545316264 [label=&quot;run&quot;];
+         545316264 -&gt; 168785358 [label=&quot;crond.reboot&quot;];
+         561155517 -&gt; 155345283 [label=&quot;∼{run}&quot;, style=dashed, arrowhead=none, constraint=false];
+         170621436 -&gt; 545316264 [label=&quot;∼{crond.reboot}&quot;, style=dashed, arrowhead=none, constraint=false];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₂₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]run₂₃ = run₂₂ ∧ r₁[run]run₂₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ run₂₄⋅ run₂₄ = run₂₂ ∧ r₁[run]run₂₄ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[run]run₂₂ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[run]run₂₂ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         505809610 [shape=rectangle,label=&quot;run₂₂&quot;];
+         561155517 -&gt; 505809610 [label=&quot;run&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[run]run₂₂ ∧ dir(r₁) ∧ ¬ dir(run₂₂)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[run]run₂₂ ∧ dir(r₁) ∧ reg(run₂₂)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[run]run₂₂ ∧ dir(r₁) ∧ reg(run₂₂) ∧ run₂₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[run]run₂₂ ∧ dir(r₁) ∧ reg(run₂₂) ∧ run₂₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ run₂₅⋅ r₁ = r₂ ∧ r₁[run]run₂₅ ∧ dir(r₁) ∧ reg(run₂₅) ∧ run₂₅[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ run₂₅⋅ r₁ = r₂ ∧ r₁[run]run₂₅ ∧ dir(r₁) ∧ reg(run₂₅) ∧ run₂₅[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         910458304 [shape=rectangle,label=&quot;∃run₂₅ | reg | []&quot;];
+         561155517 -&gt; 910458304 [label=&quot;run&quot;];
+         }
+</pre>
 
     <h2>Files</h2>
     <ul>
