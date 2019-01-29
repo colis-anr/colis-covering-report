@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 7</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre></pre>
+
+    <h2>stderr</h2>
+    <pre>[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₇ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₇ ∧ info₇[python-restkit.list]python-restkit.list₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]python-restkit.list₈ = python-restkit.list₃ ∧ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₇ ∧ info₇[python-restkit.list]python-restkit.list₈ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ python-restkit.list₉⋅ python-restkit.list₉ = python-restkit.list₃ ∧ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₇ ∧ info₇[python-restkit.list]python-restkit.list₉ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₇ ∧ info₇[python-restkit.list]python-restkit.list₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₇ ∧ info₇[python-restkit.list]python-restkit.list₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         64720837 [shape=rectangle,label=&quot;python-restkit.list₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         90341969 [shape=rectangle,label=&quot;lib₅&quot;];
+         354816564 [shape=rectangle,label=&quot;dpkg₆&quot;];
+         874194091 [shape=rectangle,label=&quot;info₇&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 90341969 [label=&quot;lib&quot;];
+         90341969 -&gt; 354816564 [label=&quot;dpkg&quot;];
+         354816564 -&gt; 874194091 [label=&quot;info&quot;];
+         874194091 -&gt; 64720837 [label=&quot;python-restkit.list&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₁₀⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₁₀ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₁₀⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₆ ∧ dpkg₆[info]info₁₀ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         64720837 [shape=rectangle,label=&quot;python-restkit.list₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         90341969 [shape=rectangle,label=&quot;lib₅&quot;];
+         354816564 [shape=rectangle,label=&quot;dpkg₆&quot;];
+         921850857 [shape=rectangle,label=&quot;∃info₁₀&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 90341969 [label=&quot;lib&quot;];
+         90341969 -&gt; 354816564 [label=&quot;dpkg&quot;];
+         354816564 -&gt; 921850857 [label=&quot;info&quot;];
+         921850857 -&gt; 64720837 [label=&quot;python-restkit.list&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₁₀, dpkg₁₁⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₁₁ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dpkg₁₁[info]info₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₁₀, dpkg₁₁⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dpkg]dpkg₁₁ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dpkg₁₁[info]info₁₀ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         64720837 [shape=rectangle,label=&quot;python-restkit.list₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         90341969 [shape=rectangle,label=&quot;lib₅&quot;];
+         921850857 [shape=rectangle,label=&quot;∃info₁₀&quot;];
+         114922387 [shape=rectangle,label=&quot;∃dpkg₁₁&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 90341969 [label=&quot;lib&quot;];
+         90341969 -&gt; 114922387 [label=&quot;dpkg&quot;];
+         921850857 -&gt; 64720837 [label=&quot;python-restkit.list&quot;];
+         114922387 -&gt; 921850857 [label=&quot;info&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₁₀, dpkg₁₁, lib₁₂⋅ r₁[var]var₄ ∧ var₄[lib]lib₁₂ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dpkg₁₁[info]info₁₀ ∧ lib₁₂[dpkg]dpkg₁₁ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₁₀, dpkg₁₁, lib₁₂⋅ r₁[var]var₄ ∧ var₄[lib]lib₁₂ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dpkg₁₁[info]info₁₀ ∧ lib₁₂[dpkg]dpkg₁₁ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         64720837 [shape=rectangle,label=&quot;python-restkit.list₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         921850857 [shape=rectangle,label=&quot;∃info₁₀&quot;];
+         114922387 [shape=rectangle,label=&quot;∃dpkg₁₁&quot;];
+         134436382 [shape=rectangle,label=&quot;∃lib₁₂&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 134436382 [label=&quot;lib&quot;];
+         921850857 -&gt; 64720837 [label=&quot;python-restkit.list&quot;];
+         114922387 -&gt; 921850857 [label=&quot;info&quot;];
+         134436382 -&gt; 114922387 [label=&quot;dpkg&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₁₀, dpkg₁₁, lib₁₂, var₁₃⋅ r₁[var]var₁₃ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dpkg₁₁[info]info₁₀ ∧ lib₁₂[dpkg]dpkg₁₁ ∧ var₁₃[lib]lib₁₂ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₁₀, dpkg₁₁, lib₁₂, var₁₃⋅ r₁[var]var₁₃ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dpkg₁₁[info]info₁₀ ∧ lib₁₂[dpkg]dpkg₁₁ ∧ var₁₃[lib]lib₁₂ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         64720837 [shape=rectangle,label=&quot;python-restkit.list₃&quot;];
+         921850857 [shape=rectangle,label=&quot;∃info₁₀&quot;];
+         114922387 [shape=rectangle,label=&quot;∃dpkg₁₁&quot;];
+         134436382 [shape=rectangle,label=&quot;∃lib₁₂&quot;];
+         763844292 [shape=rectangle,label=&quot;∃var₁₃&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         921850857 -&gt; 64720837 [label=&quot;python-restkit.list&quot;];
+         114922387 -&gt; 921850857 [label=&quot;info&quot;];
+         134436382 -&gt; 114922387 [label=&quot;dpkg&quot;];
+         763844292 -&gt; 134436382 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₁₀, dpkg₁₁, lib₁₂, var₁₃⋅ r₁ = r₂ ∧ r₁[var]var₁₃ ∧ info₁₀[python-restkit.list]python-restkit.list₃ ∧ dpkg₁₁[info]info₁₀ ∧ lib₁₂[dpkg]dpkg₁₁ ∧ var₁₃[lib]lib₁₂ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ info₁₀, dpkg₁₁, lib₁₂, var₁₃, python-restkit.list₁₄⋅ r₁ = r₂ ∧ r₁[var]var₁₃ ∧ info₁₀[python-restkit.list]python-restkit.list₁₄ ∧ dpkg₁₁[info]info₁₀ ∧ lib₁₂[dpkg]dpkg₁₁ ∧ var₁₃[lib]lib₁₂ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₁₀, dpkg₁₁, lib₁₂, var₁₃, python-restkit.list₁₄⋅ r₁ = r₂ ∧ r₁[var]var₁₃ ∧ info₁₀[python-restkit.list]python-restkit.list₁₄ ∧ dpkg₁₁[info]info₁₀ ∧ lib₁₂[dpkg]dpkg₁₁ ∧ var₁₃[lib]lib₁₂ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         921850857 [shape=rectangle,label=&quot;∃info₁₀&quot;];
+         114922387 [shape=rectangle,label=&quot;∃dpkg₁₁&quot;];
+         134436382 [shape=rectangle,label=&quot;∃lib₁₂&quot;];
+         763844292 [shape=rectangle,label=&quot;∃var₁₃&quot;];
+         41243613 [shape=rectangle,label=&quot;∃python-restkit.list₁₄&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         921850857 -&gt; 41243613 [label=&quot;python-restkit.list&quot;];
+         114922387 -&gt; 921850857 [label=&quot;info&quot;];
+         134436382 -&gt; 114922387 [label=&quot;dpkg&quot;];
+         763844292 -&gt; 134436382 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ dir(r₁) ∧ dir(var₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ dir(r₁) ∧ dir(var₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₁₈ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₁₈ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ dir(info₁₈)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₁₈ ∧ info₁₈[python-restkit.list]python-restkit.list₁₉ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ dir(info₁₈)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₁₈ ∧ info₁₈[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ dir(info₁₈)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₁₈ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ ¬ dir(info₁₈)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₁₈ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ reg(info₁₈)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₁₈ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ reg(info₁₈) ∧ info₁₈[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₀⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₂₀ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ reg(info₂₀) ∧ info₂₀[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₀⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₂₀ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ reg(info₂₀) ∧ info₂₀[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         101332555 [shape=rectangle,label=&quot;lib₁₆ | dir&quot;];
+         566130346 [shape=rectangle,label=&quot;dpkg₁₇ | dir&quot;];
+         961004512 [shape=rectangle,label=&quot;∃info₂₀ | reg | []&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 101332555 [label=&quot;lib&quot;];
+         101332555 -&gt; 566130346 [label=&quot;dpkg&quot;];
+         566130346 -&gt; 961004512 [label=&quot;info&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₁⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₂₁ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ dir(info₂₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₁⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]info₂₁ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇) ∧ dir(info₂₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         101332555 [shape=rectangle,label=&quot;lib₁₆ | dir&quot;];
+         566130346 [shape=rectangle,label=&quot;dpkg₁₇ | dir&quot;];
+         756505936 [shape=rectangle,label=&quot;∃info₂₁ | [python-restkit.list]↑ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 101332555 [label=&quot;lib&quot;];
+         101332555 -&gt; 566130346 [label=&quot;dpkg&quot;];
+         566130346 -&gt; 756505936 [label=&quot;info&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dpkg₁₇[info]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₁₇)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ ¬ dir(dpkg₁₇)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ reg(dpkg₁₇)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₁₇ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ reg(dpkg₁₇) ∧ dpkg₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₂⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₂ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ reg(dpkg₂₂) ∧ dpkg₂₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dpkg₂₂⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₂ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ reg(dpkg₂₂) ∧ dpkg₂₂[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         101332555 [shape=rectangle,label=&quot;lib₁₆ | dir&quot;];
+         732328086 [shape=rectangle,label=&quot;∃dpkg₂₂ | reg | []&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 101332555 [label=&quot;lib&quot;];
+         101332555 -&gt; 732328086 [label=&quot;dpkg&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₃⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₃ ∧ dpkg₂₃[info]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₂₃)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dpkg₂₃⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₃ ∧ dpkg₂₃[info]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(dpkg₂₃)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         101332555 [shape=rectangle,label=&quot;lib₁₆ | dir&quot;];
+         304264275 [shape=rectangle,label=&quot;∃dpkg₂₃ | [info]↑ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 101332555 [label=&quot;lib&quot;];
+         101332555 -&gt; 304264275 [label=&quot;dpkg&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₀, dpkg₂₄⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₄ ∧ dpkg₂₄[info]info₂₀ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ reg(info₂₀) ∧ dir(dpkg₂₄) ∧ info₂₀[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₀, dpkg₂₄⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₄ ∧ dpkg₂₄[info]info₂₀ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ reg(info₂₀) ∧ dir(dpkg₂₄) ∧ info₂₀[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         101332555 [shape=rectangle,label=&quot;lib₁₆ | dir&quot;];
+         961004512 [shape=rectangle,label=&quot;∃info₂₀ | reg | []&quot;];
+         710513098 [shape=rectangle,label=&quot;∃dpkg₂₄ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 101332555 [label=&quot;lib&quot;];
+         101332555 -&gt; 710513098 [label=&quot;dpkg&quot;];
+         710513098 -&gt; 961004512 [label=&quot;info&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₁, dpkg₂₅⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₅ ∧ dpkg₂₅[info]info₂₁ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(info₂₁) ∧ dir(dpkg₂₅)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₁, dpkg₂₅⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]dpkg₂₅ ∧ dpkg₂₅[info]info₂₁ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆) ∧ dir(info₂₁) ∧ dir(dpkg₂₅)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         101332555 [shape=rectangle,label=&quot;lib₁₆ | dir&quot;];
+         756505936 [shape=rectangle,label=&quot;∃info₂₁ | [python-restkit.list]↑ | dir&quot;];
+         577574381 [shape=rectangle,label=&quot;∃dpkg₂₅ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 101332555 [label=&quot;lib&quot;];
+         101332555 -&gt; 577574381 [label=&quot;dpkg&quot;];
+         577574381 -&gt; 756505936 [label=&quot;info&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ lib₁₆[dpkg]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₁₆)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ dir(r₁) ∧ dir(var₁₅) ∧ ¬ dir(lib₁₆)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(lib₁₆)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]lib₁₆ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(lib₁₆) ∧ lib₁₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₆⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₆ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(lib₂₆) ∧ lib₂₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₆⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₆ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(lib₂₆) ∧ lib₂₆[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         889999179 [shape=rectangle,label=&quot;∃lib₂₆ | reg | []&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 889999179 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₇⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₇ ∧ lib₂₇[dpkg]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₂₇)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₇⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₇ ∧ lib₂₇[dpkg]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(lib₂₇)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         694063445 [shape=rectangle,label=&quot;∃lib₂₇ | [dpkg]↑ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 694063445 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₂, lib₂₈⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₈ ∧ lib₂₈[dpkg]dpkg₂₂ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(dpkg₂₂) ∧ dir(lib₂₈) ∧ dpkg₂₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dpkg₂₂, lib₂₈⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₈ ∧ lib₂₈[dpkg]dpkg₂₂ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(dpkg₂₂) ∧ dir(lib₂₈) ∧ dpkg₂₂[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         732328086 [shape=rectangle,label=&quot;∃dpkg₂₂ | reg | []&quot;];
+         522394511 [shape=rectangle,label=&quot;∃lib₂₈ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 522394511 [label=&quot;lib&quot;];
+         522394511 -&gt; 732328086 [label=&quot;dpkg&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₃, lib₂₉⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₉ ∧ lib₂₉[dpkg]dpkg₂₃ ∧ dpkg₂₃[info]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(dpkg₂₃) ∧ dir(lib₂₉)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dpkg₂₃, lib₂₉⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₂₉ ∧ lib₂₉[dpkg]dpkg₂₃ ∧ dpkg₂₃[info]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(dpkg₂₃) ∧ dir(lib₂₉)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         304264275 [shape=rectangle,label=&quot;∃dpkg₂₃ | [info]↑ | dir&quot;];
+         683502430 [shape=rectangle,label=&quot;∃lib₂₉ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 683502430 [label=&quot;lib&quot;];
+         683502430 -&gt; 304264275 [label=&quot;dpkg&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₀, dpkg₂₄, lib₃₀⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₃₀ ∧ dpkg₂₄[info]info₂₀ ∧ lib₃₀[dpkg]dpkg₂₄ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(info₂₀) ∧ dir(dpkg₂₄) ∧ dir(lib₃₀) ∧ info₂₀[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₀, dpkg₂₄, lib₃₀⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₃₀ ∧ dpkg₂₄[info]info₂₀ ∧ lib₃₀[dpkg]dpkg₂₄ ∧ dir(r₁) ∧ dir(var₁₅) ∧ reg(info₂₀) ∧ dir(dpkg₂₄) ∧ dir(lib₃₀) ∧ info₂₀[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         961004512 [shape=rectangle,label=&quot;∃info₂₀ | reg | []&quot;];
+         710513098 [shape=rectangle,label=&quot;∃dpkg₂₄ | dir&quot;];
+         24441579 [shape=rectangle,label=&quot;∃lib₃₀ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 24441579 [label=&quot;lib&quot;];
+         710513098 -&gt; 961004512 [label=&quot;info&quot;];
+         24441579 -&gt; 710513098 [label=&quot;dpkg&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₁, dpkg₂₅, lib₃₁⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₃₁ ∧ dpkg₂₅[info]info₂₁ ∧ lib₃₁[dpkg]dpkg₂₅ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(info₂₁) ∧ dir(dpkg₂₅) ∧ dir(lib₃₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₁, dpkg₂₅, lib₃₁⋅ r₁[var]var₁₅ ∧ var₁₅[lib]lib₃₁ ∧ dpkg₂₅[info]info₂₁ ∧ lib₃₁[dpkg]dpkg₂₅ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(var₁₅) ∧ dir(info₂₁) ∧ dir(dpkg₂₅) ∧ dir(lib₃₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         685259489 [shape=rectangle,label=&quot;var₁₅ | dir&quot;];
+         756505936 [shape=rectangle,label=&quot;∃info₂₁ | [python-restkit.list]↑ | dir&quot;];
+         577574381 [shape=rectangle,label=&quot;∃dpkg₂₅ | dir&quot;];
+         382449376 [shape=rectangle,label=&quot;∃lib₃₁ | dir&quot;];
+         561155517 -&gt; 685259489 [label=&quot;var&quot;];
+         685259489 -&gt; 382449376 [label=&quot;lib&quot;];
+         577574381 -&gt; 756505936 [label=&quot;info&quot;];
+         382449376 -&gt; 577574381 [label=&quot;dpkg&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ var₁₅[lib]↑ ∧ dir(r₁) ∧ dir(var₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₅ ∧ dir(r₁) ∧ ¬ dir(var₁₅)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₅ ∧ dir(r₁) ∧ reg(var₁₅)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₅ ∧ dir(r₁) ∧ reg(var₁₅) ∧ var₁₅[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₂⋅ r₁[var]var₃₂ ∧ dir(r₁) ∧ reg(var₃₂) ∧ var₃₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₃₂⋅ r₁[var]var₃₂ ∧ dir(r₁) ∧ reg(var₃₂) ∧ var₃₂[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         18085035 [shape=rectangle,label=&quot;∃var₃₂ | reg | []&quot;];
+         561155517 -&gt; 18085035 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₃⋅ r₁[var]var₃₃ ∧ var₃₃[lib]↑ ∧ dir(r₁) ∧ dir(var₃₃)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₃₃⋅ r₁[var]var₃₃ ∧ var₃₃[lib]↑ ∧ dir(r₁) ∧ dir(var₃₃)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         1045409905 [shape=rectangle,label=&quot;∃var₃₃ | [lib]↑ | dir&quot;];
+         561155517 -&gt; 1045409905 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₆, var₃₄⋅ r₁[var]var₃₄ ∧ var₃₄[lib]lib₂₆ ∧ dir(r₁) ∧ reg(lib₂₆) ∧ dir(var₃₄) ∧ lib₂₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₆, var₃₄⋅ r₁[var]var₃₄ ∧ var₃₄[lib]lib₂₆ ∧ dir(r₁) ∧ reg(lib₂₆) ∧ dir(var₃₄) ∧ lib₂₆[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         889999179 [shape=rectangle,label=&quot;∃lib₂₆ | reg | []&quot;];
+         322295933 [shape=rectangle,label=&quot;∃var₃₄ | dir&quot;];
+         561155517 -&gt; 322295933 [label=&quot;var&quot;];
+         322295933 -&gt; 889999179 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₇, var₃₅⋅ r₁[var]var₃₅ ∧ var₃₅[lib]lib₂₇ ∧ lib₂₇[dpkg]↑ ∧ dir(r₁) ∧ dir(lib₂₇) ∧ dir(var₃₅)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₇, var₃₅⋅ r₁[var]var₃₅ ∧ var₃₅[lib]lib₂₇ ∧ lib₂₇[dpkg]↑ ∧ dir(r₁) ∧ dir(lib₂₇) ∧ dir(var₃₅)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         694063445 [shape=rectangle,label=&quot;∃lib₂₇ | [dpkg]↑ | dir&quot;];
+         83056904 [shape=rectangle,label=&quot;∃var₃₅ | dir&quot;];
+         561155517 -&gt; 83056904 [label=&quot;var&quot;];
+         83056904 -&gt; 694063445 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₂, lib₂₈, var₃₆⋅ r₁[var]var₃₆ ∧ lib₂₈[dpkg]dpkg₂₂ ∧ var₃₆[lib]lib₂₈ ∧ dir(r₁) ∧ reg(dpkg₂₂) ∧ dir(lib₂₈) ∧ dir(var₃₆) ∧ dpkg₂₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dpkg₂₂, lib₂₈, var₃₆⋅ r₁[var]var₃₆ ∧ lib₂₈[dpkg]dpkg₂₂ ∧ var₃₆[lib]lib₂₈ ∧ dir(r₁) ∧ reg(dpkg₂₂) ∧ dir(lib₂₈) ∧ dir(var₃₆) ∧ dpkg₂₂[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         732328086 [shape=rectangle,label=&quot;∃dpkg₂₂ | reg | []&quot;];
+         522394511 [shape=rectangle,label=&quot;∃lib₂₈ | dir&quot;];
+         653513936 [shape=rectangle,label=&quot;∃var₃₆ | dir&quot;];
+         561155517 -&gt; 653513936 [label=&quot;var&quot;];
+         522394511 -&gt; 732328086 [label=&quot;dpkg&quot;];
+         653513936 -&gt; 522394511 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₃, lib₂₉, var₃₇⋅ r₁[var]var₃₇ ∧ lib₂₉[dpkg]dpkg₂₃ ∧ var₃₇[lib]lib₂₉ ∧ dpkg₂₃[info]↑ ∧ dir(r₁) ∧ dir(dpkg₂₃) ∧ dir(lib₂₉) ∧ dir(var₃₇)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dpkg₂₃, lib₂₉, var₃₇⋅ r₁[var]var₃₇ ∧ lib₂₉[dpkg]dpkg₂₃ ∧ var₃₇[lib]lib₂₉ ∧ dpkg₂₃[info]↑ ∧ dir(r₁) ∧ dir(dpkg₂₃) ∧ dir(lib₂₉) ∧ dir(var₃₇)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         304264275 [shape=rectangle,label=&quot;∃dpkg₂₃ | [info]↑ | dir&quot;];
+         683502430 [shape=rectangle,label=&quot;∃lib₂₉ | dir&quot;];
+         822984157 [shape=rectangle,label=&quot;∃var₃₇ | dir&quot;];
+         561155517 -&gt; 822984157 [label=&quot;var&quot;];
+         683502430 -&gt; 304264275 [label=&quot;dpkg&quot;];
+         822984157 -&gt; 683502430 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₀, dpkg₂₄, lib₃₀, var₃₈⋅ r₁[var]var₃₈ ∧ dpkg₂₄[info]info₂₀ ∧ lib₃₀[dpkg]dpkg₂₄ ∧ var₃₈[lib]lib₃₀ ∧ dir(r₁) ∧ reg(info₂₀) ∧ dir(dpkg₂₄) ∧ dir(lib₃₀) ∧ dir(var₃₈) ∧ info₂₀[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₀, dpkg₂₄, lib₃₀, var₃₈⋅ r₁[var]var₃₈ ∧ dpkg₂₄[info]info₂₀ ∧ lib₃₀[dpkg]dpkg₂₄ ∧ var₃₈[lib]lib₃₀ ∧ dir(r₁) ∧ reg(info₂₀) ∧ dir(dpkg₂₄) ∧ dir(lib₃₀) ∧ dir(var₃₈) ∧ info₂₀[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         961004512 [shape=rectangle,label=&quot;∃info₂₀ | reg | []&quot;];
+         710513098 [shape=rectangle,label=&quot;∃dpkg₂₄ | dir&quot;];
+         24441579 [shape=rectangle,label=&quot;∃lib₃₀ | dir&quot;];
+         69638199 [shape=rectangle,label=&quot;∃var₃₈ | dir&quot;];
+         561155517 -&gt; 69638199 [label=&quot;var&quot;];
+         710513098 -&gt; 961004512 [label=&quot;info&quot;];
+         24441579 -&gt; 710513098 [label=&quot;dpkg&quot;];
+         69638199 -&gt; 24441579 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₁, dpkg₂₅, lib₃₁, var₃₉⋅ r₁[var]var₃₉ ∧ dpkg₂₅[info]info₂₁ ∧ lib₃₁[dpkg]dpkg₂₅ ∧ var₃₉[lib]lib₃₁ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(info₂₁) ∧ dir(dpkg₂₅) ∧ dir(lib₃₁) ∧ dir(var₃₉)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ info₂₁, dpkg₂₅, lib₃₁, var₃₉⋅ r₁[var]var₃₉ ∧ dpkg₂₅[info]info₂₁ ∧ lib₃₁[dpkg]dpkg₂₅ ∧ var₃₉[lib]lib₃₁ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(info₂₁) ∧ dir(dpkg₂₅) ∧ dir(lib₃₁) ∧ dir(var₃₉)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         756505936 [shape=rectangle,label=&quot;∃info₂₁ | [python-restkit.list]↑ | dir&quot;];
+         577574381 [shape=rectangle,label=&quot;∃dpkg₂₅ | dir&quot;];
+         382449376 [shape=rectangle,label=&quot;∃lib₃₁ | dir&quot;];
+         556099078 [shape=rectangle,label=&quot;∃var₃₉ | dir&quot;];
+         561155517 -&gt; 556099078 [label=&quot;var&quot;];
+         577574381 -&gt; 756505936 [label=&quot;info&quot;];
+         382449376 -&gt; 577574381 [label=&quot;dpkg&quot;];
+         556099078 -&gt; 382449376 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁) ∧ ¬ dir(r₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]reg(r₁) ∧ dir(r₁)
+[DEBUG]Rule C-Kinds applied
+[DEBUG]⊥
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₂⋅ r₁ = r₂ ∧ r₁[var]var₃₂ ∧ dir(r₁) ∧ reg(var₃₂) ∧ var₃₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₃₃⋅ r₁ = r₂ ∧ r₁[var]var₃₃ ∧ var₃₃[lib]↑ ∧ dir(r₁) ∧ dir(var₃₃)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₆, var₃₄⋅ r₁ = r₂ ∧ r₁[var]var₃₄ ∧ var₃₄[lib]lib₂₆ ∧ dir(r₁) ∧ reg(lib₂₆) ∧ dir(var₃₄) ∧ lib₂₆[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₇, var₃₅⋅ r₁ = r₂ ∧ r₁[var]var₃₅ ∧ var₃₅[lib]lib₂₇ ∧ lib₂₇[dpkg]↑ ∧ dir(r₁) ∧ dir(lib₂₇) ∧ dir(var₃₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₂, lib₂₈, var₃₆⋅ r₁ = r₂ ∧ r₁[var]var₃₆ ∧ lib₂₈[dpkg]dpkg₂₂ ∧ var₃₆[lib]lib₂₈ ∧ dir(r₁) ∧ reg(dpkg₂₂) ∧ dir(lib₂₈) ∧ dir(var₃₆) ∧ dpkg₂₂[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dpkg₂₃, lib₂₉, var₃₇⋅ r₁ = r₂ ∧ r₁[var]var₃₇ ∧ lib₂₉[dpkg]dpkg₂₃ ∧ var₃₇[lib]lib₂₉ ∧ dpkg₂₃[info]↑ ∧ dir(r₁) ∧ dir(dpkg₂₃) ∧ dir(lib₂₉) ∧ dir(var₃₇)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₀, dpkg₂₄, lib₃₀, var₃₈⋅ r₁ = r₂ ∧ r₁[var]var₃₈ ∧ dpkg₂₄[info]info₂₀ ∧ lib₃₀[dpkg]dpkg₂₄ ∧ var₃₈[lib]lib₃₀ ∧ dir(r₁) ∧ reg(info₂₀) ∧ dir(dpkg₂₄) ∧ dir(lib₃₀) ∧ dir(var₃₈) ∧ info₂₀[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ info₂₁, dpkg₂₅, lib₃₁, var₃₉⋅ r₁ = r₂ ∧ r₁[var]var₃₉ ∧ dpkg₂₅[info]info₂₁ ∧ lib₃₁[dpkg]dpkg₂₅ ∧ var₃₉[lib]lib₃₁ ∧ info₂₁[python-restkit.list]↑ ∧ dir(r₁) ∧ dir(info₂₁) ∧ dir(dpkg₂₅) ∧ dir(lib₃₁) ∧ dir(var₃₉)
+[DEBUG]Normal form reached.
+Unsupported utility: which
+</pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/python-restkit_4.2.2-2/preinst</li>
+    </ul>
+  </body>
+</html>

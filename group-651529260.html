@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 7</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre></pre>
+
+    <h2>stderr</h2>
+    <pre>[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₆ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₆ ∧ dlocate₆[dlocatedb.txt]dlocatedb.txt₇ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dlocatedb.txt₇ = dlocatedb.txt₃ ∧ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₆ ∧ dlocate₆[dlocatedb.txt]dlocatedb.txt₇ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dlocatedb.txt₈⋅ dlocatedb.txt₈ = dlocatedb.txt₃ ∧ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₆ ∧ dlocate₆[dlocatedb.txt]dlocatedb.txt₈ ∧ dir(r₁)
+[DEBUG]Rule S-Eq applied
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₆ ∧ dlocate₆[dlocatedb.txt]dlocatedb.txt₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₆ ∧ dlocate₆[dlocatedb.txt]dlocatedb.txt₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         627455318 [shape=rectangle,label=&quot;dlocatedb.txt₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         90341969 [shape=rectangle,label=&quot;lib₅&quot;];
+         955994410 [shape=rectangle,label=&quot;dlocate₆&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 90341969 [label=&quot;lib&quot;];
+         90341969 -&gt; 955994410 [label=&quot;dlocate&quot;];
+         955994410 -&gt; 627455318 [label=&quot;dlocatedb.txt&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₉⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₉ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₉⋅ r₁[var]var₄ ∧ var₄[lib]lib₅ ∧ lib₅[dlocate]dlocate₉ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₃ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         627455318 [shape=rectangle,label=&quot;dlocatedb.txt₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         90341969 [shape=rectangle,label=&quot;lib₅&quot;];
+         557478353 [shape=rectangle,label=&quot;∃dlocate₉&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 90341969 [label=&quot;lib&quot;];
+         90341969 -&gt; 557478353 [label=&quot;dlocate&quot;];
+         557478353 -&gt; 627455318 [label=&quot;dlocatedb.txt&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₉, lib₁₀⋅ r₁[var]var₄ ∧ var₄[lib]lib₁₀ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₃ ∧ lib₁₀[dlocate]dlocate₉ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₉, lib₁₀⋅ r₁[var]var₄ ∧ var₄[lib]lib₁₀ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₃ ∧ lib₁₀[dlocate]dlocate₉ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         627455318 [shape=rectangle,label=&quot;dlocatedb.txt₃&quot;];
+         514055161 [shape=rectangle,label=&quot;var₄&quot;];
+         557478353 [shape=rectangle,label=&quot;∃dlocate₉&quot;];
+         549651965 [shape=rectangle,label=&quot;∃lib₁₀&quot;];
+         561155517 -&gt; 514055161 [label=&quot;var&quot;];
+         514055161 -&gt; 549651965 [label=&quot;lib&quot;];
+         557478353 -&gt; 627455318 [label=&quot;dlocatedb.txt&quot;];
+         549651965 -&gt; 557478353 [label=&quot;dlocate&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₉, lib₁₀, var₁₁⋅ r₁[var]var₁₁ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₃ ∧ lib₁₀[dlocate]dlocate₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₉, lib₁₀, var₁₁⋅ r₁[var]var₁₁ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₃ ∧ lib₁₀[dlocate]dlocate₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         627455318 [shape=rectangle,label=&quot;dlocatedb.txt₃&quot;];
+         557478353 [shape=rectangle,label=&quot;∃dlocate₉&quot;];
+         549651965 [shape=rectangle,label=&quot;∃lib₁₀&quot;];
+         1036742910 [shape=rectangle,label=&quot;∃var₁₁&quot;];
+         561155517 -&gt; 1036742910 [label=&quot;var&quot;];
+         557478353 -&gt; 627455318 [label=&quot;dlocatedb.txt&quot;];
+         549651965 -&gt; 557478353 [label=&quot;dlocate&quot;];
+         1036742910 -&gt; 549651965 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₉, lib₁₀, var₁₁⋅ r₁ = r₂ ∧ r₁[var]var₁₁ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₃ ∧ lib₁₀[dlocate]dlocate₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₉, lib₁₀, var₁₁, dlocatedb.txt₁₂⋅ r₁ = r₂ ∧ r₁[var]var₁₁ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₁₂ ∧ lib₁₀[dlocate]dlocate₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₉, lib₁₀, var₁₁, dlocatedb.txt₁₂⋅ r₁ = r₂ ∧ r₁[var]var₁₁ ∧ dlocate₉[dlocatedb.txt]dlocatedb.txt₁₂ ∧ lib₁₀[dlocate]dlocate₉ ∧ var₁₁[lib]lib₁₀ ∧ dir(r₁)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         155345283 [shape=rectangle,label=&quot;r₂&quot;];
+         557478353 [shape=rectangle,label=&quot;∃dlocate₉&quot;];
+         549651965 [shape=rectangle,label=&quot;∃lib₁₀&quot;];
+         1036742910 [shape=rectangle,label=&quot;∃var₁₁&quot;];
+         1045073672 [shape=rectangle,label=&quot;∃dlocatedb.txt₁₂&quot;];
+         561155517 -&gt; 1036742910 [label=&quot;var&quot;];
+         557478353 -&gt; 1045073672 [label=&quot;dlocatedb.txt&quot;];
+         549651965 -&gt; 557478353 [label=&quot;dlocate&quot;];
+         1036742910 -&gt; 549651965 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ dir(var₁₃)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(dlocate₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₅ ∧ dlocate₁₅[dlocatedb.txt]dlocatedb.txt₁₆ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(dlocate₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₅ ∧ dlocate₁₅[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(dlocate₁₅)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ ¬ dir(dlocate₁₅)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(dlocate₁₅)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₅ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(dlocate₁₅) ∧ dlocate₁₅[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₇⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(dlocate₁₇) ∧ dlocate₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₁₇⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ reg(dlocate₁₇) ∧ dlocate₁₇[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         78122921 [shape=rectangle,label=&quot;lib₁₄ | dir&quot;];
+         218715390 [shape=rectangle,label=&quot;∃dlocate₁₇ | reg | []&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 78122921 [label=&quot;lib&quot;];
+         78122921 -&gt; 218715390 [label=&quot;dlocate&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₈⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₈ ∧ dlocate₁₈[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(dlocate₁₈)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₁₈⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]dlocate₁₈ ∧ dlocate₁₈[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄) ∧ dir(dlocate₁₈)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         78122921 [shape=rectangle,label=&quot;lib₁₄ | dir&quot;];
+         197512101 [shape=rectangle,label=&quot;∃dlocate₁₈ | [dlocatedb.txt]↑ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 78122921 [label=&quot;lib&quot;];
+         78122921 -&gt; 197512101 [label=&quot;dlocate&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ lib₁₄[dlocate]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₁₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ ¬ dir(lib₁₄)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₄)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₄ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₄) ∧ lib₁₄[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₁₉⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₉ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₉) ∧ lib₁₉[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₁₉⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₁₉ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(lib₁₉) ∧ lib₁₉[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         471935268 [shape=rectangle,label=&quot;∃lib₁₉ | reg | []&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 471935268 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₀⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₀ ∧ lib₂₀[dlocate]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₂₀)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₀⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₀ ∧ lib₂₀[dlocate]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(lib₂₀)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         933389886 [shape=rectangle,label=&quot;∃lib₂₀ | [dlocate]↑ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 933389886 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₇, lib₂₁⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₁ ∧ lib₂₁[dlocate]dlocate₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(dlocate₁₇) ∧ dir(lib₂₁) ∧ dlocate₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₁₇, lib₂₁⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₁ ∧ lib₂₁[dlocate]dlocate₁₇ ∧ dir(r₁) ∧ dir(var₁₃) ∧ reg(dlocate₁₇) ∧ dir(lib₂₁) ∧ dlocate₁₇[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         218715390 [shape=rectangle,label=&quot;∃dlocate₁₇ | reg | []&quot;];
+         759490715 [shape=rectangle,label=&quot;∃lib₂₁ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 759490715 [label=&quot;lib&quot;];
+         759490715 -&gt; 218715390 [label=&quot;dlocate&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₈, lib₂₂⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₂ ∧ lib₂₂[dlocate]dlocate₁₈ ∧ dlocate₁₈[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(dlocate₁₈) ∧ dir(lib₂₂)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₁₈, lib₂₂⋅ r₁[var]var₁₃ ∧ var₁₃[lib]lib₂₂ ∧ lib₂₂[dlocate]dlocate₁₈ ∧ dlocate₁₈[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(var₁₃) ∧ dir(dlocate₁₈) ∧ dir(lib₂₂)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         763844292 [shape=rectangle,label=&quot;var₁₃ | dir&quot;];
+         197512101 [shape=rectangle,label=&quot;∃dlocate₁₈ | [dlocatedb.txt]↑ | dir&quot;];
+         765087067 [shape=rectangle,label=&quot;∃lib₂₂ | dir&quot;];
+         561155517 -&gt; 763844292 [label=&quot;var&quot;];
+         763844292 -&gt; 765087067 [label=&quot;lib&quot;];
+         765087067 -&gt; 197512101 [label=&quot;dlocate&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ var₁₃[lib]↑ ∧ dir(r₁) ∧ dir(var₁₃)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ ¬ dir(var₁₃)
+[DEBUG]Rule R-NKind applied
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ reg(var₁₃)
+[DEBUG]Rule S-Kind applied
+[DEBUG]r₁[var]var₁₃ ∧ dir(r₁) ∧ reg(var₁₃) ∧ var₁₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₃⋅ r₁[var]var₂₃ ∧ dir(r₁) ∧ reg(var₂₃) ∧ var₂₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₂₃⋅ r₁[var]var₂₃ ∧ dir(r₁) ∧ reg(var₂₃) ∧ var₂₃[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         906849696 [shape=rectangle,label=&quot;∃var₂₃ | reg | []&quot;];
+         561155517 -&gt; 906849696 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₄⋅ r₁[var]var₂₄ ∧ var₂₄[lib]↑ ∧ dir(r₁) ∧ dir(var₂₄)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ var₂₄⋅ r₁[var]var₂₄ ∧ var₂₄[lib]↑ ∧ dir(r₁) ∧ dir(var₂₄)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         753953944 [shape=rectangle,label=&quot;∃var₂₄ | [lib]↑ | dir&quot;];
+         561155517 -&gt; 753953944 [label=&quot;var&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₁₉, var₂₅⋅ r₁[var]var₂₅ ∧ var₂₅[lib]lib₁₉ ∧ dir(r₁) ∧ reg(lib₁₉) ∧ dir(var₂₅) ∧ lib₁₉[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₁₉, var₂₅⋅ r₁[var]var₂₅ ∧ var₂₅[lib]lib₁₉ ∧ dir(r₁) ∧ reg(lib₁₉) ∧ dir(var₂₅) ∧ lib₁₉[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         471935268 [shape=rectangle,label=&quot;∃lib₁₉ | reg | []&quot;];
+         400739277 [shape=rectangle,label=&quot;∃var₂₅ | dir&quot;];
+         561155517 -&gt; 400739277 [label=&quot;var&quot;];
+         400739277 -&gt; 471935268 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₀, var₂₆⋅ r₁[var]var₂₆ ∧ var₂₆[lib]lib₂₀ ∧ lib₂₀[dlocate]↑ ∧ dir(r₁) ∧ dir(lib₂₀) ∧ dir(var₂₆)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ lib₂₀, var₂₆⋅ r₁[var]var₂₆ ∧ var₂₆[lib]lib₂₀ ∧ lib₂₀[dlocate]↑ ∧ dir(r₁) ∧ dir(lib₂₀) ∧ dir(var₂₆)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         933389886 [shape=rectangle,label=&quot;∃lib₂₀ | [dlocate]↑ | dir&quot;];
+         288893043 [shape=rectangle,label=&quot;∃var₂₆ | dir&quot;];
+         561155517 -&gt; 288893043 [label=&quot;var&quot;];
+         288893043 -&gt; 933389886 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₇, lib₂₁, var₂₇⋅ r₁[var]var₂₇ ∧ lib₂₁[dlocate]dlocate₁₇ ∧ var₂₇[lib]lib₂₁ ∧ dir(r₁) ∧ reg(dlocate₁₇) ∧ dir(lib₂₁) ∧ dir(var₂₇) ∧ dlocate₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₁₇, lib₂₁, var₂₇⋅ r₁[var]var₂₇ ∧ lib₂₁[dlocate]dlocate₁₇ ∧ var₂₇[lib]lib₂₁ ∧ dir(r₁) ∧ reg(dlocate₁₇) ∧ dir(lib₂₁) ∧ dir(var₂₇) ∧ dlocate₁₇[∅]
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         218715390 [shape=rectangle,label=&quot;∃dlocate₁₇ | reg | []&quot;];
+         759490715 [shape=rectangle,label=&quot;∃lib₂₁ | dir&quot;];
+         354494255 [shape=rectangle,label=&quot;∃var₂₇ | dir&quot;];
+         561155517 -&gt; 354494255 [label=&quot;var&quot;];
+         759490715 -&gt; 218715390 [label=&quot;dlocate&quot;];
+         354494255 -&gt; 759490715 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₈, lib₂₂, var₂₈⋅ r₁[var]var₂₈ ∧ lib₂₂[dlocate]dlocate₁₈ ∧ var₂₈[lib]lib₂₂ ∧ dlocate₁₈[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(dlocate₁₈) ∧ dir(lib₂₂) ∧ dir(var₂₈)
+[DEBUG]Normal form reached.
+[DEBUG]Simplifying
+[DEBUG]∃ dlocate₁₈, lib₂₂, var₂₈⋅ r₁[var]var₂₈ ∧ lib₂₂[dlocate]dlocate₁₈ ∧ var₂₈[lib]lib₂₂ ∧ dlocate₁₈[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(dlocate₁₈) ∧ dir(lib₂₂) ∧ dir(var₂₈)
+[DEBUG]digraph sdlkfj {
+         561155517 [shape=rectangle,label=&quot;r₁ | dir&quot;];
+         197512101 [shape=rectangle,label=&quot;∃dlocate₁₈ | [dlocatedb.txt]↑ | dir&quot;];
+         765087067 [shape=rectangle,label=&quot;∃lib₂₂ | dir&quot;];
+         1060740340 [shape=rectangle,label=&quot;∃var₂₈ | dir&quot;];
+         561155517 -&gt; 1060740340 [label=&quot;var&quot;];
+         765087067 -&gt; 197512101 [label=&quot;dlocate&quot;];
+         1060740340 -&gt; 765087067 [label=&quot;lib&quot;];
+         }
+[DEBUG]Normalizing
+[DEBUG]r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]dir(r₁) ∧ ¬ dir(r₁)
+[DEBUG]Rule R-NKind applied
+[DEBUG]reg(r₁) ∧ dir(r₁)
+[DEBUG]Rule C-Kinds applied
+[DEBUG]⊥
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]r₁ = r₂ ∧ r₁[var]↑ ∧ dir(r₁)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₃⋅ r₁ = r₂ ∧ r₁[var]var₂₃ ∧ dir(r₁) ∧ reg(var₂₃) ∧ var₂₃[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ var₂₄⋅ r₁ = r₂ ∧ r₁[var]var₂₄ ∧ var₂₄[lib]↑ ∧ dir(r₁) ∧ dir(var₂₄)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₁₉, var₂₅⋅ r₁ = r₂ ∧ r₁[var]var₂₅ ∧ var₂₅[lib]lib₁₉ ∧ dir(r₁) ∧ reg(lib₁₉) ∧ dir(var₂₅) ∧ lib₁₉[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ lib₂₀, var₂₆⋅ r₁ = r₂ ∧ r₁[var]var₂₆ ∧ var₂₆[lib]lib₂₀ ∧ lib₂₀[dlocate]↑ ∧ dir(r₁) ∧ dir(lib₂₀) ∧ dir(var₂₆)
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₇, lib₂₁, var₂₇⋅ r₁ = r₂ ∧ r₁[var]var₂₇ ∧ lib₂₁[dlocate]dlocate₁₇ ∧ var₂₇[lib]lib₂₁ ∧ dir(r₁) ∧ reg(dlocate₁₇) ∧ dir(lib₂₁) ∧ dir(var₂₇) ∧ dlocate₁₇[∅]
+[DEBUG]Normal form reached.
+[DEBUG]Normalizing
+[DEBUG]∃ dlocate₁₈, lib₂₂, var₂₈⋅ r₁ = r₂ ∧ r₁[var]var₂₈ ∧ lib₂₂[dlocate]dlocate₁₈ ∧ var₂₈[lib]lib₂₂ ∧ dlocate₁₈[dlocatedb.txt]↑ ∧ dir(r₁) ∧ dir(dlocate₁₈) ∧ dir(lib₂₂) ∧ dir(var₂₈)
+[DEBUG]Normal form reached.
+Unsupported utility: rm
+</pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/dlocate_1.07+nmu1/postinst</li>
+    </ul>
+  </body>
+</html>
