@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 1</dd>
+
+      <dt>Number of files</dt>
+      <dd>86</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Error states
+- id: error-1
+  root: r₁₅
+  cwd: /
+  clause: r₁ = r₁₅ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-deconfigure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;in-favour&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;removing&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 0
+- Error cases: 1
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/dict-freedict-por-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-por-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-san-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-slk-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-spa-ast_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-spa-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-spa-por_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-srp-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-swe-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-swe-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-swh-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-swh-pol_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-tur-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-tur-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-swe_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-swh_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-tur_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-fra-bre_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-fra-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-fra-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-fra-nld_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-gla-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-gle-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-gle-pol_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-hrv-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-hun-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-isl-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-ita-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-ita-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-jpn-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-jpn-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-jpn-fra_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-jpn-rus_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-kha-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-kha-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-kur-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-kur-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-kur-tur_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-lat-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-lat-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-lit-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-mkd-bul_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-nld-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-nld-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-nld-fra_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-nno-nob_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-oci-cat_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-pol-gle_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-srp_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-afr-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-afr-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-all_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-ara-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-bre-fra_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-ces-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-ckb-kmr_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-cym-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-dan-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-eng_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-fra_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-ita_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-kur_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-nld_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-por_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-swe_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-deu-tur_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-afr_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-ara_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-ces_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-cym_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-deu_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-ell_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-fra_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-gle_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-hin_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-hrv_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-hun_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-ita_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-lat_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-lit_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-nld_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-pol_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-por_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-rom_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-rus_2016.12.12-1/postrm</li>
+      <li>/corpus/dict-freedict-eng-spa_2016.12.12-1/postrm</li>
+    </ul>
+  </body>
+</html>

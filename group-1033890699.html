@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 1</dd>
+
+      <dt>Number of files</dt>
+      <dd>11</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Error states
+- id: error-1
+  root: r₇
+  cwd: /
+  clause: r₁ = r₇ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;deconfigure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;failed-upgrade&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 0
+- Error cases: 1
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/fonts-ipafont-nonfree-jisx0208_1:00103-7/prerm</li>
+      <li>/corpus/fonts-mona_1:2.90-1/prerm</li>
+      <li>/corpus/fonts-takao-gothic_00303.01-2/prerm</li>
+      <li>/corpus/fonts-takao-mincho_00303.01-2/prerm</li>
+      <li>/corpus/fonts-vlgothic_20141206-5/prerm</li>
+      <li>/corpus/fonts-ipamj-mincho_005.01-2/prerm</li>
+      <li>/corpus/fonts-hanazono_20170904-2/prerm</li>
+      <li>/corpus/fonts-ipaexfont-gothic_00301-5/prerm</li>
+      <li>/corpus/fonts-ipaexfont-mincho_00301-5/prerm</li>
+      <li>/corpus/fonts-ipafont-gothic_00303-18/prerm</li>
+      <li>/corpus/fonts-ipafont-mincho_00303-18/prerm</li>
+    </ul>
+  </body>
+</html>
