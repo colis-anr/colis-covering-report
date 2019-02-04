@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 1</dd>
+
+      <dt>Number of files</dt>
+      <dd>35</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Error states
+- id: error-1
+  root: r₁₃
+  cwd: /
+  clause: r₁ = r₁₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;failed-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-install&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;disappear&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 0
+- Error cases: 1
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/unace-nonfree_2.5-9/postrm</li>
+      <li>/corpus/zutils_1.7-5/postrm</li>
+      <li>/corpus/yubikey-luks_0.3.3+3.ge11e4c1-1/postrm</li>
+      <li>/corpus/west-chamber-dkms_20100405+svn20111107.r124-8/postrm</li>
+      <li>/corpus/trousers_0.3.14+fixed1-1/postrm</li>
+      <li>/corpus/libsss-sudo_1.16.3-1/postrm</li>
+      <li>/corpus/sg3-utils-udev_1.42-2/postrm</li>
+      <li>/corpus/selinux-policy-dev_2:2.20180114-4/postrm</li>
+      <li>/corpus/powerline-gitstatus_1.2.1-1/postrm</li>
+      <li>/corpus/ppp_2.4.7-2+3/postrm</li>
+      <li>/corpus/plymouth_0.9.3-3/postrm</li>
+      <li>/corpus/plymouth-themes_0.9.3-3/postrm</li>
+      <li>/corpus/plymouth-x11_0.9.3-3/postrm</li>
+      <li>/corpus/open-infrastructure-package-tracker_20170515-3/postrm</li>
+      <li>/corpus/nut-cgi_2.7.4-8/postrm</li>
+      <li>/corpus/nut-server_2.7.4-8/postrm</li>
+      <li>/corpus/ntfs-3g_1:2017.3.23-2/postrm</li>
+      <li>/corpus/netbase_5.4/postrm</li>
+      <li>/corpus/memlockd_1.2/postrm</li>
+      <li>/corpus/live-boot-initramfs-tools_1:20180603/postrm</li>
+      <li>/corpus/live-tools_1:20171207/postrm</li>
+      <li>/corpus/kopano-webapp-nginx_3.4.20+dfsg1-1/postrm</li>
+      <li>/corpus/irker_2.18+dfsg-3/postrm</li>
+      <li>/corpus/ibus_1.5.19-1/postrm</li>
+      <li>/corpus/gnumed-client-de_1.7.3+dfsg-1/postrm</li>
+      <li>/corpus/gnumed-client-de_1.7.3+dfsg-1/prerm</li>
+      <li>/corpus/fuse_2.9.8-2/postrm</li>
+      <li>/corpus/epoptes_0.5.10-2/postrm</li>
+      <li>/corpus/login-duo_1.9.21-1.1/postrm</li>
+      <li>/corpus/dmraid_1.0.0.rc16-8/postrm</li>
+      <li>/corpus/libcpufreq0_008-1+b1/postrm</li>
+      <li>/corpus/ceph-base_10.2.5-7.2/postrm</li>
+      <li>/corpus/ceph-common_10.2.5-7.2/postrm</li>
+      <li>/corpus/bopm_3.1.3-3+b2/postrm</li>
+      <li>/corpus/asylum_0.3.2-3/postrm</li>
+    </ul>
+  </body>
+</html>

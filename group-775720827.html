@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>27</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₃
+  cwd: /
+  clause: r₁ = r₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/yabause-gtk_0.9.14-3/prerm</li>
+      <li>/corpus/yabause-qt_0.9.14-3/prerm</li>
+      <li>/corpus/xmlroff_0.6.2-1.3+b1/prerm</li>
+      <li>/corpus/w3c-sgml-lib_1.3-2/prerm</li>
+      <li>/corpus/w3-dtd-mathml_2.0.0.0-5/prerm</li>
+      <li>/corpus/sgml-data_2.0.11/prerm</li>
+      <li>/corpus/scm_5f2-2+b1/prerm</li>
+      <li>/corpus/rarian-compat_0.8.1-6+b1/prerm</li>
+      <li>/corpus/docutils-common_0.14+dfsg-3/prerm</li>
+      <li>/corpus/otags_4.05.1-1/prerm</li>
+      <li>/corpus/ooo-thumbnailer_0.2-5/prerm</li>
+      <li>/corpus/liblucene2-java_2.9.4+ds1-6/prerm</li>
+      <li>/corpus/gnome-colors-common_5.5.1-2/prerm</li>
+      <li>/corpus/libstdc++6_8.2.0-4/prerm</li>
+      <li>/corpus/w3c-xsd-xslt_3.6.3-3/prerm</li>
+      <li>/corpus/docbook-xml_4.5-8/prerm</li>
+      <li>/corpus/docbook-xsl_1.79.1+dfsg-2/prerm</li>
+      <li>/corpus/docbook-xsl-ns_1.79.1+dfsg-2/prerm</li>
+      <li>/corpus/docbook2x_0.8.8-17/prerm</li>
+      <li>/corpus/docbook5-xml_5.0-2/prerm</li>
+      <li>/corpus/docbook-ebnf_1.2~cr1-6/prerm</li>
+      <li>/corpus/docbook-mathml_1.1CR1-2/prerm</li>
+      <li>/corpus/docbook-simple_1.1-4.2/prerm</li>
+      <li>/corpus/docbook-slides_3.4.0-5/prerm</li>
+      <li>/corpus/docbook-website_2.5.0.0-8/prerm</li>
+      <li>/corpus/dia-common_0.97.3+git20160930-8/prerm</li>
+      <li>/corpus/courier-filter-perl_0.200+ds-4/prerm</li>
+    </ul>
+  </body>
+</html>

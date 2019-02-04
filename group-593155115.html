@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>15</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₃
+  cwd: /
+  clause: r₁ = r₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/xpilot-ng-server_1:4.7.3-2.3/postrm</li>
+      <li>/corpus/w3-dtd-mathml_2.0.0.0-5/postrm</li>
+      <li>/corpus/sgml-data_2.0.11/postrm</li>
+      <li>/corpus/sendpage-server_1.0.3-1/postrm</li>
+      <li>/corpus/rebuildd_0.4.2/postrm</li>
+      <li>/corpus/docutils-common_0.14+dfsg-3/postrm</li>
+      <li>/corpus/maelstrom_1.4.3-L3.0.6+main-9/postrm</li>
+      <li>/corpus/docbook-xml_4.5-8/postrm</li>
+      <li>/corpus/docbook-ebnf_1.2~cr1-6/postrm</li>
+      <li>/corpus/docbook-mathml_1.1CR1-2/postrm</li>
+      <li>/corpus/docbook-simple_1.1-4.2/postrm</li>
+      <li>/corpus/docbook-slides_3.4.0-5/postrm</li>
+      <li>/corpus/docbook-website_2.5.0.0-8/postrm</li>
+      <li>/corpus/dkimproxy_1.4.1-3/postrm</li>
+      <li>/corpus/cntlm_0.92.3-1+b1/postrm</li>
+    </ul>
+  </body>
+</html>

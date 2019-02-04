@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>30</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₇
+  cwd: /
+  clause: r₁ = r₇ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;deconfigure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;failed-upgrade&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/trn4_4.0-test77-11+b3/prerm</li>
+      <li>/corpus/zurl_1.9.1-4/prerm</li>
+      <li>/corpus/surf-alggeo-nox_1.0.6+ds-4/prerm</li>
+      <li>/corpus/ssh-askpass-fullscreen_0.3-3.1+b2/prerm</li>
+      <li>/corpus/soundscaperenderer_0.4.2~dfsg-6+b2/prerm</li>
+      <li>/corpus/soundscaperenderer-nox_0.4.2~dfsg-6+b2/prerm</li>
+      <li>/corpus/snd-gtk-jack_18.6-1/prerm</li>
+      <li>/corpus/snd-gtk-pulse_18.6-1/prerm</li>
+      <li>/corpus/snd-nox_18.6-1/prerm</li>
+      <li>/corpus/rsync_3.1.2-2.2/prerm</li>
+      <li>/corpus/remembrance-agent_2.12-7+b2/prerm</li>
+      <li>/corpus/quota_4.04-2/prerm</li>
+      <li>/corpus/puredata-core_0.48.2-1/prerm</li>
+      <li>/corpus/pseudo_1.8.1+git20161012-2/prerm</li>
+      <li>/corpus/procps_2:3.3.15-2/prerm</li>
+      <li>/corpus/openssh-client_1:7.8p1-1/prerm</li>
+      <li>/corpus/ssh-askpass-gnome_1:7.8p1-1/prerm</li>
+      <li>/corpus/libnewlib-arm-none-eabi_3.0.0.20180802-2/prerm</li>
+      <li>/corpus/libnewlib-dev_3.0.0.20180802-2/prerm</li>
+      <li>/corpus/neovim_0.3.1-1/prerm</li>
+      <li>/corpus/neovim-qt_0.2.9-1/prerm</li>
+      <li>/corpus/luakit_2012.09.13-r1-8+b1/prerm</li>
+      <li>/corpus/local-apt-repository_0.6/prerm</li>
+      <li>/corpus/ksh_93u+20120801-3.1/prerm</li>
+      <li>/corpus/python-hy_0.12.1-2/prerm</li>
+      <li>/corpus/python3-hy_0.12.1-2/prerm</li>
+      <li>/corpus/groovy_2.4.15-1/prerm</li>
+      <li>/corpus/filler_1.02-6.2/prerm</li>
+      <li>/corpus/farpd_0.2-11+b2/prerm</li>
+      <li>/corpus/apt-show-versions_0.22.7/prerm</li>
+    </ul>
+  </body>
+</html>

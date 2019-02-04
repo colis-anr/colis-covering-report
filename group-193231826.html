@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 1</dd>
+
+      <dt>Number of files</dt>
+      <dd>50</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Error states
+- id: error-1
+  root: r₇
+  cwd: /
+  clause: r₁ = r₇ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;deconfigure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;failed-upgrade&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 0
+- Error cases: 1
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/fonts-mathematica_21/prerm</li>
+      <li>/corpus/zfs-fuse_0.7.0-18/prerm</li>
+      <li>/corpus/uruk_20180528-2/prerm</li>
+      <li>/corpus/uim_1:1.8.8-3/prerm</li>
+      <li>/corpus/uim-anthy_1:1.8.8-3/prerm</li>
+      <li>/corpus/uim-skk_1:1.8.8-3/prerm</li>
+      <li>/corpus/uim-tcode_1:1.8.8-3/prerm</li>
+      <li>/corpus/uim-chewing_0.1.0-6/prerm</li>
+      <li>/corpus/tar_1.30+dfsg-2/prerm</li>
+      <li>/corpus/surf_2.0+git20180223-1/prerm</li>
+      <li>/corpus/suckless-tools_44-1/prerm</li>
+      <li>/corpus/ssh-askpass_1:1.2.4.1-10/prerm</li>
+      <li>/corpus/slurmctld_17.11.9-1/prerm</li>
+      <li>/corpus/ratpoison_1.4.8-2+b1/prerm</li>
+      <li>/corpus/python-html2text_2018.1.9-1/prerm</li>
+      <li>/corpus/python3-html2text_2018.1.9-1/prerm</li>
+      <li>/corpus/pypy-lib-testsuite_6.0.0+dfsg-3/prerm</li>
+      <li>/corpus/pypy-tk_6.0.0+dfsg-3/prerm</li>
+      <li>/corpus/pybtex_0.21-2/prerm</li>
+      <li>/corpus/proxychains4_4.13-1/prerm</li>
+      <li>/corpus/pike7.8-core_7.8.866-8.1/prerm</li>
+      <li>/corpus/pike8.0-core_8.0.610-1+b1/prerm</li>
+      <li>/corpus/python-parallax_1.0.4-1/prerm</li>
+      <li>/corpus/python3-parallax_1.0.4-1/prerm</li>
+      <li>/corpus/oxygencursors_0.0.2012-06-kde4.8-2.1/prerm</li>
+      <li>/corpus/openstreetmap-carto_2.45.1-1/prerm</li>
+      <li>/corpus/uim-mozc_2.23.2815.102+dfsg-2/prerm</li>
+      <li>/corpus/mksh_56c-1/prerm</li>
+      <li>/corpus/openbox-lxde-session_0.99.2-3/prerm</li>
+      <li>/corpus/lilyterm_0.9.9.4+git20150208.f600c0-5/prerm</li>
+      <li>/corpus/ksshaskpass_4:5.13.4-1/prerm</li>
+      <li>/corpus/kwalletcli_3.01-1/prerm</li>
+      <li>/corpus/joe-jupp_3.1.36-3/prerm</li>
+      <li>/corpus/jupp_3.1.36-3/prerm</li>
+      <li>/corpus/aspell-de_20161207-5/prerm</li>
+      <li>/corpus/gprolog_1.4.5-4.1+b1/prerm</li>
+      <li>/corpus/gnustep-back0.26-art_0.26.2-4/prerm</li>
+      <li>/corpus/gnustep-back0.26-cairo_0.26.2-4/prerm</li>
+      <li>/corpus/gnustep-back0.26-xlib_0.26.2-4/prerm</li>
+      <li>/corpus/gcin-voice_0~20170223-2/prerm</li>
+      <li>/corpus/firewalld_0.6.1-2/prerm</li>
+      <li>/corpus/fakeroot-ng_0.18-4+b2/prerm</li>
+      <li>/corpus/dwm_6.1-5/prerm</li>
+      <li>/corpus/crystalcursors_1.1.1-14/prerm</li>
+      <li>/corpus/python-cssutils_1.0.2-1/prerm</li>
+      <li>/corpus/python3-cssutils_1.0.2-1/prerm</li>
+      <li>/corpus/couriergraph_0.25-4.4/prerm</li>
+      <li>/corpus/bindgraph_0.2a-6/prerm</li>
+      <li>/corpus/aspell-bg_4.1-6/prerm</li>
+      <li>/corpus/apt-cacher_1.7.19/prerm</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>43</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₃
+  cwd: /
+  clause: r₁ = r₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/zangband_1:2.7.5pre1-12/postrm</li>
+      <li>/corpus/nvidia-kernel-support_390.77-1/postrm</li>
+      <li>/corpus/nvidia-legacy-304xx-kernel-support_304.137-5/postrm</li>
+      <li>/corpus/nvidia-legacy-340xx-kernel-support_340.107-2/postrm</li>
+      <li>/corpus/astromenace_1.3.2+repack-5/prerm</li>
+      <li>/corpus/yorick-data_2.2.04+dfsg1-9/postrm</li>
+      <li>/corpus/yorick-doc_2.2.04+dfsg1-9/postrm</li>
+      <li>/corpus/xscreensaver_5.36-1/prerm</li>
+      <li>/corpus/xscreensaver-gl_5.36-1/postrm</li>
+      <li>/corpus/asp.net-examples_4.2-2.1/postrm</li>
+      <li>/corpus/python-twisted-core_18.7.0-2/postrm</li>
+      <li>/corpus/python3-twisted_18.7.0-2/postrm</li>
+      <li>/corpus/smartpm-core_1.4-2/postrm</li>
+      <li>/corpus/skksearch_0.0-24/postrm</li>
+      <li>/corpus/rcconf_3.2/postrm</li>
+      <li>/corpus/quagga-ospfd_1.2.4-2+b1/postrm</li>
+      <li>/corpus/python2.7-minimal_2.7.15-4/postrm</li>
+      <li>/corpus/libpython2.7-minimal_2.7.15-4/postrm</li>
+      <li>/corpus/python-axiom_0.7.5-2/postrm</li>
+      <li>/corpus/nullidentd_1.0-5+b2/postrm</li>
+      <li>/corpus/python-nevow_0.14.2-2/postrm</li>
+      <li>/corpus/mueller7-dict_2002.02.27-10/postrm</li>
+      <li>/corpus/mueller7accent-dict_2002.02.27-10/postrm</li>
+      <li>/corpus/marco_1.20.2-1/prerm</li>
+      <li>/corpus/mailping_0.0.4-3/postrm</li>
+      <li>/corpus/luarocks_2.4.2+dfsg-1/postrm</li>
+      <li>/corpus/libax25_0.0.12-rc4-2/postrm</li>
+      <li>/corpus/locales_2.27-5/prerm</li>
+      <li>/corpus/locales-all_2.27-5/prerm</li>
+      <li>/corpus/gconf2_3.2.6-5/postrm</li>
+      <li>/corpus/fio_3.8-1/postrm</li>
+      <li>/corpus/fai-nfsroot_5.7/postrm</li>
+      <li>/corpus/fai-quickstart_5.7/postrm</li>
+      <li>/corpus/dkimpy-milter_1.0.0-1/postrm</li>
+      <li>/corpus/dbskkd-cdb_1:3.00-2/postrm</li>
+      <li>/corpus/crtmpserver-apps_1.0~dfsg-5.5/prerm</li>
+      <li>/corpus/couriergrey_0.3.2-5+b3/prerm</li>
+      <li>/corpus/cloud-initramfs-dyn-netconf_0.18.debian6/postrm</li>
+      <li>/corpus/cloud-initramfs-growroot_0.18.debian6/postrm</li>
+      <li>/corpus/cloud-initramfs-rescuevol_0.18.debian6/postrm</li>
+      <li>/corpus/libbcprov-java_1.60-1/postrm</li>
+      <li>/corpus/bison++_1.21.11-4+b1/prerm</li>
+      <li>/corpus/bamfdaemon_0.5.3-3/postrm</li>
+    </ul>
+  </body>
+</html>

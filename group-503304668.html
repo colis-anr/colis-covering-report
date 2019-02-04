@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>93</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₅
+  cwd: /
+  clause: r₁ = r₅ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;deconfigure&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/r8168-dkms_8.046.00-1/prerm</li>
+      <li>/corpus/sl-modem-dkms_2.9.11~20110321-12/prerm</li>
+      <li>/corpus/nvidia-kernel-dkms_390.77-1/prerm</li>
+      <li>/corpus/nvidia-legacy-304xx-kernel-dkms_304.137-5/prerm</li>
+      <li>/corpus/nvidia-legacy-340xx-kernel-dkms_340.107-2/prerm</li>
+      <li>/corpus/broadcom-sta-dkms_6.30.223.271-8/prerm</li>
+      <li>/corpus/virtualbox-dkms_5.2.18-dfsg-2/prerm</li>
+      <li>/corpus/virtualbox-guest-dkms_5.2.18-dfsg-2/prerm</li>
+      <li>/corpus/basilisk2_0.9.20180101-1+b1/prerm</li>
+      <li>/corpus/xtables-addons-dkms_3.1-0.1/prerm</li>
+      <li>/corpus/wireguard-dkms_0.0.20180809-1/prerm</li>
+      <li>/corpus/v4l2loopback-dkms_0.12.0-3/prerm</li>
+      <li>/corpus/libtowitoko2_2.0.7-9+b1/prerm</li>
+      <li>/corpus/tp-smapi-dkms_0.43-1/prerm</li>
+      <li>/corpus/sysdig-dkms_0.22.0-1/prerm</li>
+      <li>/corpus/spl-dkms_0.7.9-3/prerm</li>
+      <li>/corpus/puppet-module-voxpupuli-corosync_5.0.0-1/prerm</li>
+      <li>/corpus/puppet-module-vswitch_9.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-openstacklib_13.1.0-2/prerm</li>
+      <li>/corpus/puppet-module-oslo_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-ovn_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-puppet-community-mcollective_0.6.2-3/prerm</li>
+      <li>/corpus/puppet-module-puppetlabs-haproxy_2.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-puppetlabs-mongodb_0.7.0-2/prerm</li>
+      <li>/corpus/puppet-module-puppetlabs-rabbitmq_5.3.1-2/prerm</li>
+      <li>/corpus/puppet-module-puppetlabs-rsync_1.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-puppetlabs-tftp_0.2.3-2/prerm</li>
+      <li>/corpus/puppet-module-puppetlabs-vcsrepo_1.3.2-1/prerm</li>
+      <li>/corpus/puppet-module-richardc-datacat_0.6.2-1/prerm</li>
+      <li>/corpus/puppet-module-sahara_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-saz-rsyslog_2.2.1-1/prerm</li>
+      <li>/corpus/puppet-module-saz-ssh_2.8.1-2/prerm</li>
+      <li>/corpus/puppet-module-sbitio-monit_1.0.0-2/prerm</li>
+      <li>/corpus/puppet-module-swift_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-openstack-extras_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-adrienthebo-filemapper_1.1.3-1/prerm</li>
+      <li>/corpus/puppet-module-aodh_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-arioch-redis_3.2.0-1/prerm</li>
+      <li>/corpus/puppet-module-camptocamp-kmod_2.1.1-1/prerm</li>
+      <li>/corpus/puppet-module-camptocamp-openssl_1.5.0-1/prerm</li>
+      <li>/corpus/puppet-module-ceilometer_13.1.0-2/prerm</li>
+      <li>/corpus/puppet-module-ceph_2.5.0-1/prerm</li>
+      <li>/corpus/puppet-module-cinder_13.1.0-2/prerm</li>
+      <li>/corpus/puppet-module-cloudkitty_2.0.0-1/prerm</li>
+      <li>/corpus/puppet-module-congress_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-designate_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-duritong-sysctl_0.0.11-1/prerm</li>
+      <li>/corpus/puppet-module-glance_13.1.0-2/prerm</li>
+      <li>/corpus/puppet-module-gnocchi_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-heat_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-horizon_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-ironic_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-joshuabaird-ipaclient_2.5.2-1/prerm</li>
+      <li>/corpus/puppet-module-keystone_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-manila_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-michaeltchapman-galera_0.0.3-2/prerm</li>
+      <li>/corpus/puppet-module-murano_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-nanliu-staging_1.0.4-1/prerm</li>
+      <li>/corpus/puppet-module-neutron_13.1.0-1/prerm</li>
+      <li>/corpus/puppet-module-nova_13.1.0-1/prerm</li>
+      <li>/corpus/oss4-dkms_4.2-build2010-5/prerm</li>
+      <li>/corpus/puppet-module-oci_4/prerm</li>
+      <li>/corpus/openafs-modules-dkms_1.8.1-1/prerm</li>
+      <li>/corpus/ndiswrapper-dkms_1.60-6/prerm</li>
+      <li>/corpus/nat-rtsp-dkms_0.7+1.g2ea3cb6-1/prerm</li>
+      <li>/corpus/lttng-modules-dkms_2.10.7-1/prerm</li>
+      <li>/corpus/lime-forensics-dkms_1.7.8-1/prerm</li>
+      <li>/corpus/langford-dkms_0.0.20130228-6/prerm</li>
+      <li>/corpus/ktap_0.4+git20160427-1/prerm</li>
+      <li>/corpus/kpatch-dkms_0.6.0-0.1/prerm</li>
+      <li>/corpus/iptables-netflow-dkms_2.3-5/prerm</li>
+      <li>/corpus/dpdk-rte-kni-dkms_17.11.4-1/prerm</li>
+      <li>/corpus/dpdk-igb-uio-dkms_17.11.4-1/prerm</li>
+      <li>/corpus/dm-writeboost-dkms_2.2.9-1/prerm</li>
+      <li>/corpus/ddcci-dkms_0.3.1-3/prerm</li>
+      <li>/corpus/libclutter-imcontext-0.1-bin_0.1.4-3+b3/prerm</li>
+      <li>/corpus/cl-cluck_0.1.3-2/prerm</li>
+      <li>/corpus/cl-fftw3_1.0-1/prerm</li>
+      <li>/corpus/cl-getopt_1.2.0-3/prerm</li>
+      <li>/corpus/cl-irc-logger_0.9.4-3/prerm</li>
+      <li>/corpus/cl-lml_2.5.7-4/prerm</li>
+      <li>/corpus/cl-lml2_1.6.6-4/prerm</li>
+      <li>/corpus/cl-modlisp_0.6-7/prerm</li>
+      <li>/corpus/cl-photo_0.14-4/prerm</li>
+      <li>/corpus/cl-pipes_1.2.1-5/prerm</li>
+      <li>/corpus/cl-pubmed_2.1.3-5/prerm</li>
+      <li>/corpus/cl-xlunit_0.6.3-2/prerm</li>
+      <li>/corpus/cl-xptest_1.2.4-3/prerm</li>
+      <li>/corpus/blktap-dkms_2.0.93-0.10/prerm</li>
+      <li>/corpus/bbswitch-dkms_0.8-5/prerm</li>
+      <li>/corpus/aufs-dkms_4.17+20180827-1/prerm</li>
+      <li>/corpus/acpi-call-dkms_1.1.0-4/prerm</li>
+      <li>/corpus/adv-17v35x-dkms_5.0.3.0-2/prerm</li>
+    </ul>
+  </body>
+</html>

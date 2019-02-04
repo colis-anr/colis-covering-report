@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 1</dd>
+
+      <dt>Number of files</dt>
+      <dd>14</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Error states
+- id: error-1
+  root: r₉
+  cwd: /
+  clause: r₁ = r₉ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;reconfigure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-deconfigure&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 0
+- Error cases: 1
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/xdvik-ja_22.87.03+j1.42-1+b1/postinst</li>
+      <li>/corpus/toxiproxy_2.0.0+dfsg1-6+b1/postinst</li>
+      <li>/corpus/syncthing-discosrv_0.14.49+ds1-3/postinst</li>
+      <li>/corpus/syncthing-relaysrv_0.14.49+ds1-3/postinst</li>
+      <li>/corpus/smart-notifier_0.28-5/postinst</li>
+      <li>/corpus/nutcracker_0.4.1+dfsg-1/postinst</li>
+      <li>/corpus/linkchecker_9.4.0-2/postinst</li>
+      <li>/corpus/libguestfs-tools_1:1.38.4-1/postinst</li>
+      <li>/corpus/influxdb_1.6.1-1/postinst</li>
+      <li>/corpus/fsprotect_1.0.7/postinst</li>
+      <li>/corpus/dosage_2.15-2/postinst</li>
+      <li>/corpus/autodeb-server_0.20.0-1/postinst</li>
+      <li>/corpus/autodeb-worker_0.20.0-1/postinst</li>
+      <li>/corpus/aptly-api_1.3.0-6/postinst</li>
+    </ul>
+  </body>
+</html>

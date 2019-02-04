@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>31</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₁₃
+  cwd: /
+  clause: r₁ = r₁₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;failed-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-install&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;disappear&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/lmbench_3.0-a9+debian.1-2/prerm</li>
+      <li>/corpus/xsoldier_1:1.8-5/postrm</li>
+      <li>/corpus/xtel_3.3.0-21/postrm</li>
+      <li>/corpus/xiterm+thai_1.10-2/prerm</li>
+      <li>/corpus/xletters_1.1.1-5+b1/postrm</li>
+      <li>/corpus/xfireworks_1.3-10+b1/postrm</li>
+      <li>/corpus/vtgrab_0.1.8-3+b1/postrm</li>
+      <li>/corpus/toppler_1.1.6-3/postrm</li>
+      <li>/corpus/cups-tea4cups_3.14~alpha0+svn3576-1/postrm</li>
+      <li>/corpus/tenmado_0.10-3/postrm</li>
+      <li>/corpus/sogo_4.0.1-1/postrm</li>
+      <li>/corpus/simple-obfs_0.0.5-4/postrm</li>
+      <li>/corpus/shadowsocks-libev_3.2.0+ds-3/postrm</li>
+      <li>/corpus/ser2net_3.5-2/postrm</li>
+      <li>/corpus/sgmltools-lite_3.0.3.0.cvs.20010909-20/postrm</li>
+      <li>/corpus/portreserve_0.0.4-1+b2/postrm</li>
+      <li>/corpus/netscript-2.4_5.5.3/postrm</li>
+      <li>/corpus/icebreaker_1.21-12/postrm</li>
+      <li>/corpus/hamfax_0.8.1-1+b1/postrm</li>
+      <li>/corpus/gbatnav_1.0.4cvs20051004-5+b2/prerm</li>
+      <li>/corpus/freewnn-cserver_1.1.1~a021+cvs20130302-7+b1/postrm</li>
+      <li>/corpus/freewnn-jserver_1.1.1~a021+cvs20130302-7+b1/postrm</li>
+      <li>/corpus/freewnn-kserver_1.1.1~a021+cvs20130302-7+b1/postrm</li>
+      <li>/corpus/desktop-autoloader_0.0.4-1/postrm</li>
+      <li>/corpus/dangen_0.5-4+b1/postrm</li>
+      <li>/corpus/cups-core-drivers_2.2.8-5/postrm</li>
+      <li>/corpus/cups-x2go_3.0.1.3-4/postrm</li>
+      <li>/corpus/cron-apt_0.13.0/postrm</li>
+      <li>/corpus/changetrack_4.7-5/postrm</li>
+      <li>/corpus/bombardier_0.8.3+nmu1+b3/postrm</li>
+      <li>/corpus/autodns-dhcp_0.9/postrm</li>
+    </ul>
+  </body>
+</html>

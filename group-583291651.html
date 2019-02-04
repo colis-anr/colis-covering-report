@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>11</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₃
+  cwd: /
+  clause: r₁ = r₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;install&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/mono-xsp4_4.2-2.1/preinst</li>
+      <li>/corpus/rxvt-unicode_9.22-4/preinst</li>
+      <li>/corpus/mftrace_1.2.19-1/preinst</li>
+      <li>/corpus/mgetty-fax_1.1.36-3.1/preinst</li>
+      <li>/corpus/lyskom-server_2.1.2-14/preinst</li>
+      <li>/corpus/libgstreamer1.0-dev_1.14.2-2/preinst</li>
+      <li>/corpus/golang-go_2:1.10~5/preinst</li>
+      <li>/corpus/ghc-doc_8.2.2-6/preinst</li>
+      <li>/corpus/xul-ext-iceweasel-branding_0.4.0/preinst</li>
+      <li>/corpus/firefox-esr_60.1.0esr-3/preinst</li>
+      <li>/corpus/cdecl_2.5-13+b2/preinst</li>
+    </ul>
+  </body>
+</html>

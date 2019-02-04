@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 1</dd>
+
+      <dt>Number of files</dt>
+      <dd>214</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Error states
+- id: error-1
+  root: r₁₃
+  cwd: /
+  clause: r₁ = r₁₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;failed-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-install&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;disappear&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 0
+- Error cases: 1
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/xtide-data-nonfree_20100529-1/postrm</li>
+      <li>/corpus/ooohg_09.2013-2/postrm</li>
+      <li>/corpus/intel-microcode_3.20180807a.1/postrm</li>
+      <li>/corpus/amd64-microcode_3.20180524.1/postrm</li>
+      <li>/corpus/angband-audio_1:3.1.0-1/postrm</li>
+      <li>/corpus/dahdi-firmware-nonfree_2.11.1.0.20170917-1/postrm</li>
+      <li>/corpus/yash_2.47-1/postrm</li>
+      <li>/corpus/yaskkserv_1.1.0-2/postrm</li>
+      <li>/corpus/xtide-coastline_20020202-1/postrm</li>
+      <li>/corpus/xtide-data_20100529-1/postrm</li>
+      <li>/corpus/xwelltris_1.0.1-17/postrm</li>
+      <li>/corpus/xl2tpd_1.3.12-1/postrm</li>
+      <li>/corpus/uniconfd_4.6.1-14/postrm</li>
+      <li>/corpus/x2goserver-printing_4.1.0.2-2/postrm</li>
+      <li>/corpus/wing_0.7-31/postrm</li>
+      <li>/corpus/wicd-cli_1.7.4+tb2-6/postrm</li>
+      <li>/corpus/wicd-curses_1.7.4+tb2-6/postrm</li>
+      <li>/corpus/wicd-gtk_1.7.4+tb2-6/postrm</li>
+      <li>/corpus/vtun_3.0.3-4/postrm</li>
+      <li>/corpus/vzctl_4.9.4-5/postrm</li>
+      <li>/corpus/w1retap_1.4.4-3/postrm</li>
+      <li>/corpus/vdradmin-am_3.6.10-4/postrm</li>
+      <li>/corpus/uucp_1.07-24/postrm</li>
+      <li>/corpus/uim_1:1.8.8-3/postrm</li>
+      <li>/corpus/ubuntu-archive-keyring_2016.05.13-1/postrm</li>
+      <li>/corpus/tryton-server_4.6.7-1/postrm</li>
+      <li>/corpus/tua_4.3-13+b1/postrm</li>
+      <li>/corpus/toxiproxy_2.0.0+dfsg1-6+b1/postrm</li>
+      <li>/corpus/tix_8.4.3-10/postrm</li>
+      <li>/corpus/tntnet_2.2.1-3+b1/postrm</li>
+      <li>/corpus/tiny-initramfs-core_0.1-5/postrm</li>
+      <li>/corpus/systemtap-client_3.3-1/postrm</li>
+      <li>/corpus/systemtap-server_3.3-1/postrm</li>
+      <li>/corpus/systraq_20160803-3/postrm</li>
+      <li>/corpus/synaptic_0.84.3/postrm</li>
+      <li>/corpus/syncthing-discosrv_0.14.49+ds1-3/postrm</li>
+      <li>/corpus/syncthing-relaysrv_0.14.49+ds1-3/postrm</li>
+      <li>/corpus/remotetrx_17.12.2-1/postrm</li>
+      <li>/corpus/svxlink-server_17.12.2-1/postrm</li>
+      <li>/corpus/stompserver_0.9.9gem-4/postrm</li>
+      <li>/corpus/sssd-common_1.16.3-1/postrm</li>
+      <li>/corpus/sqlgrey_1:1.8.0-1/postrm</li>
+      <li>/corpus/spacearyarya_1.0.2-7.1/postrm</li>
+      <li>/corpus/softhsm2-common_2.4.0-0.1/postrm</li>
+      <li>/corpus/slurmctld_17.11.9-1/postrm</li>
+      <li>/corpus/slurmd_17.11.9-1/postrm</li>
+      <li>/corpus/slurmdbd_17.11.9-1/postrm</li>
+      <li>/corpus/shairport-sync_3.1.7-1/postrm</li>
+      <li>/corpus/scolasync_5.2-2/postrm</li>
+      <li>/corpus/scanbd_1.5.1-4/postrm</li>
+      <li>/corpus/sanlock_3.6.0-3/postrm</li>
+      <li>/corpus/rrdcached_1.7.0-1+b2/postrm</li>
+      <li>/corpus/roger-router-cli_1.8.14-4/postrm</li>
+      <li>/corpus/ripmime_1.4.0.10.debian.1-1+b1/postrm</li>
+      <li>/corpus/redsocks_0.5-2/postrm</li>
+      <li>/corpus/selinux-policy-default_2:2.20180114-4/postrm</li>
+      <li>/corpus/selinux-policy-mls_2:2.20180114-4/postrm</li>
+      <li>/corpus/quassel-core_1:0.12.5-2/postrm</li>
+      <li>/corpus/certbot_0.26.1-1/postrm</li>
+      <li>/corpus/letsencrypt_0.26.1-1/postrm</li>
+      <li>/corpus/pyracerz_0.2-8/postrm</li>
+      <li>/corpus/pygopherd_2.0.18.5/postrm</li>
+      <li>/corpus/puppet_5.5.6-1/postrm</li>
+      <li>/corpus/pp-popularity-contest_1.0.6-3/postrm</li>
+      <li>/corpus/prads_0.3.3-1+b1/postrm</li>
+      <li>/corpus/prelink_0.0.20131005-1/postrm</li>
+      <li>/corpus/preload_0.6.4-2+b1/postrm</li>
+      <li>/corpus/libpam-poldi_0.4.2+git20161115.553060d-1/postrm</li>
+      <li>/corpus/policyd-rate-limit_0.7.1-1/postrm</li>
+      <li>/corpus/pike7.8-core_7.8.866-8.1/postrm</li>
+      <li>/corpus/pike8.0-core_8.0.610-1+b1/postrm</li>
+      <li>/corpus/php-dompdf_0.6.2+dfsg-3/postrm</li>
+      <li>/corpus/petitboot_13.05.29.14.00-g4dc604b-1+b7/postrm</li>
+      <li>/corpus/petris_1.0.1-10+b1/postrm</li>
+      <li>/corpus/pciutils_1:3.5.2-1/postrm</li>
+      <li>/corpus/oss-preserve_1.1-6+b2/postrm</li>
+      <li>/corpus/owfs-common_3.1p5-2/postrm</li>
+      <li>/corpus/oz_0.16.0-1/postrm</li>
+      <li>/corpus/ovn-host_2.10.0+2018.08.28+git.8ca7c82b7d+ds1-1/postrm</li>
+      <li>/corpus/orthanc_1.4.1+dfsg-1/postrm</li>
+      <li>/corpus/orthanc-dicomweb_0.5+dfsg-2/postrm</li>
+      <li>/corpus/orthanc-postgresql_2.2-2/postrm</li>
+      <li>/corpus/orthanc-webviewer_2.4-2/postrm</li>
+      <li>/corpus/orthanc-wsi_0.5-2+b1/postrm</li>
+      <li>/corpus/ovn-central_2.10.0+2018.08.28+git.8ca7c82b7d+ds1-1/postrm</li>
+      <li>/corpus/openvswitch-pki_2.10.0+2018.08.28+git.8ca7c82b7d+ds1-1/postrm</li>
+      <li>/corpus/openvswitch-switch_2.10.0+2018.08.28+git.8ca7c82b7d+ds1-1/postrm</li>
+      <li>/corpus/opennebula-context_4.14.0-1/postrm</li>
+      <li>/corpus/dhtnode_1.7.4-1/postrm</li>
+      <li>/corpus/opendnssec-enforcer-mysql_1:2.1.3-0.2/postrm</li>
+      <li>/corpus/open-infrastructure-system-boot_20161101-lts2-1/postrm</li>
+      <li>/corpus/open-infrastructure-system-config_20161101-lts1-2/postrm</li>
+      <li>/corpus/nwrite_1.9.2-20.1+b1/postrm</li>
+      <li>/corpus/nutcracker_0.4.1+dfsg-1/postrm</li>
+      <li>/corpus/niceshaper_1.2.4-1/postrm</li>
+      <li>/corpus/network-manager_1.12.2-2/postrm</li>
+      <li>/corpus/network-manager-iodine_1.2.0-3/postrm</li>
+      <li>/corpus/network-manager-openconnect_1.2.4-1.1/postrm</li>
+      <li>/corpus/natlog_2.01.00-2/postrm</li>
+      <li>/corpus/nagzilla_2.0-1/postrm</li>
+      <li>/corpus/mumudvb_1.7.1-1+b1/postrm</li>
+      <li>/corpus/munge_0.5.13-1/postrm</li>
+      <li>/corpus/monsterz_0.7.1-9+b1/postrm</li>
+      <li>/corpus/minicoredumper_2.0.1-1/postrm</li>
+      <li>/corpus/minidlna_1.2.1+dfsg-1+b1/postrm</li>
+      <li>/corpus/menu-xdg_0.5/postrm</li>
+      <li>/corpus/mercurial_4.7-1/postrm</li>
+      <li>/corpus/maradns_2.0.13-1.2+b1/postrm</li>
+      <li>/corpus/mapivi_0.9.7-1.1/postrm</li>
+      <li>/corpus/logster_0.0.1-2/postrm</li>
+      <li>/corpus/linuxlogo_5.11-9+b1/postrm</li>
+      <li>/corpus/live-boot_1:20180603/postrm</li>
+      <li>/corpus/live-config_5.20180224/postrm</li>
+      <li>/corpus/libtcd-dev_2.2.2-2/postrm</li>
+      <li>/corpus/libpam-abl_0.6.0-5/postrm</li>
+      <li>/corpus/libktoblzcheck1v5_1.49-4/postrm</li>
+      <li>/corpus/libfm4_1.3.0.2-1/postrm</li>
+      <li>/corpus/lava-dispatcher_2018.5.post1-2/postrm</li>
+      <li>/corpus/ksh_93u+20120801-3.1/postrm</li>
+      <li>/corpus/kopano-webapp-apache2_3.4.20+dfsg1-1/postrm</li>
+      <li>/corpus/kopano-webapp-common_3.4.20+dfsg1-1/postrm</li>
+      <li>/corpus/python-notebook_5.4.1-1/postrm</li>
+      <li>/corpus/python3-notebook_5.4.1-1/postrm</li>
+      <li>/corpus/jabber-muc_0.8-6/postrm</li>
+      <li>/corpus/jabberd2_2.6.1-3+b1/postrm</li>
+      <li>/corpus/jamnntpd_1.3-1/postrm</li>
+      <li>/corpus/kea-common_1.4.0.P1-3/postrm</li>
+      <li>/corpus/iptables-optimizer_0.9.14-1/postrm</li>
+      <li>/corpus/ipsec-tools_1:0.8.2+20140711-12/postrm</li>
+      <li>/corpus/ipmiutil_3.1.2-1/postrm</li>
+      <li>/corpus/influxdb_1.6.1-1/postrm</li>
+      <li>/corpus/ident2_1.07-1.1+b2/postrm</li>
+      <li>/corpus/icecc_1.1-2/postrm</li>
+      <li>/corpus/icinga2-bin_2.9.1-1/postrm</li>
+      <li>/corpus/hugs_98.200609.21-5.4+b4/postrm</li>
+      <li>/corpus/gweled_0.9.1-6/postrm</li>
+      <li>/corpus/gtkballs_3.1.5-11+b1/postrm</li>
+      <li>/corpus/gsfonts_1:8.11+urwcyr1.0.7~pre44-4.4/postrm</li>
+      <li>/corpus/grml-rescueboot_0.5.0/postrm</li>
+      <li>/corpus/graphite-web_1.0.2+debian-2/postrm</li>
+      <li>/corpus/gravitywars_1.102-34+b1/postrm</li>
+      <li>/corpus/greed_3.10-1+b3/postrm</li>
+      <li>/corpus/golly_2.8-1/postrm</li>
+      <li>/corpus/glusterfs-common_4.1.3-1/postrm</li>
+      <li>/corpus/gjiten_2.6-3/postrm</li>
+      <li>/corpus/git-buildpackage_0.9.10/postrm</li>
+      <li>/corpus/geoclue-2.0_2.4.12-2/postrm</li>
+      <li>/corpus/gearhead2-data_0.701-1/postrm</li>
+      <li>/corpus/geki2_2.0.3-10/postrm</li>
+      <li>/corpus/geki3_1.0.3-8.1/postrm</li>
+      <li>/corpus/libgauche-0.9-0_0.9.5-1+b1/postrm</li>
+      <li>/corpus/fusionforge-web_6.0.5-2/postrm</li>
+      <li>/corpus/fuzzyocr_3.6.0-11/postrm</li>
+      <li>/corpus/fvwm_1:2.6.8-1/postrm</li>
+      <li>/corpus/gadmin-openvpn-server_0.1.5-3.1+b2/postrm</li>
+      <li>/corpus/fsprotect_1.0.7/postrm</li>
+      <li>/corpus/flamethrower_0.1.8-4/postrm</li>
+      <li>/corpus/flashproxy-facilitator_1.7-4/postrm</li>
+      <li>/corpus/filetea_0.1.18-1/postrm</li>
+      <li>/corpus/filetraq_0.3/postrm</li>
+      <li>/corpus/fdclone_3.01e-1+b1/postrm</li>
+      <li>/corpus/eyefiserver_2.4+dfsg-3/postrm</li>
+      <li>/corpus/python3-expeyes_4.4.4+dfsg-1/postrm</li>
+      <li>/corpus/ebhttpd_1:1.0.dfsg.1-4.3+b2/postrm</li>
+      <li>/corpus/ebnetd_1:1.0.dfsg.1-4.3+b2/postrm</li>
+      <li>/corpus/ndtpd_1:1.0.dfsg.1-4.3+b2/postrm</li>
+      <li>/corpus/ecryptfs-utils_111-4/postrm</li>
+      <li>/corpus/dump_0.4b46-5/postrm</li>
+      <li>/corpus/doodle_0.7.0-9+b2/postrm</li>
+      <li>/corpus/dopewars_1.5.12-19+b1/postrm</li>
+      <li>/corpus/doctorj_5.0.0-5/postrm</li>
+      <li>/corpus/dms-dr_1.0.8.1-1/postrm</li>
+      <li>/corpus/dnshistory_1.3-2+b3/postrm</li>
+      <li>/corpus/dict-gazetteer2k-zips_1.0.0-5.4/postrm</li>
+      <li>/corpus/dict-jargon_4.4.7-3/postrm</li>
+      <li>/corpus/dict-moby-thesaurus_1.0-6.4/postrm</li>
+      <li>/corpus/didiwiki_0.5-13/postrm</li>
+      <li>/corpus/dict-de-en_1.8.1-5/postrm</li>
+      <li>/corpus/direwolf_1.4+dfsg-1+b1/postrm</li>
+      <li>/corpus/dict-gazetteer2k-places_1.0.0-5.4/postrm</li>
+      <li>/corpus/dict-bouvier_6.revised-3.3/postrm</li>
+      <li>/corpus/dict-gazetteer2k-counties_1.0.0-5.4/postrm</li>
+      <li>/corpus/denyhosts_2.10-2/postrm</li>
+      <li>/corpus/debtags_2.1.5/postrm</li>
+      <li>/corpus/cvsgraph_1.7.0-5/postrm</li>
+      <li>/corpus/csync2_2.0-15-g36e738e-3/postrm</li>
+      <li>/corpus/cpufreqd_2.4.2-2+b1/postrm</li>
+      <li>/corpus/connman_1.36-1/postrm</li>
+      <li>/corpus/clonezilla_3.27.16-3/postrm</li>
+      <li>/corpus/burrow_1.1.0-1/postrm</li>
+      <li>/corpus/ca-certificates-java_20180516/postrm</li>
+      <li>/corpus/bittornado_0.3.18-10.3/postrm</li>
+      <li>/corpus/bcfg2_1.4.0~pre2+git141-g6d40dace6358-1/postrm</li>
+      <li>/corpus/bcfg2-server_1.4.0~pre2+git141-g6d40dace6358-1/postrm</li>
+      <li>/corpus/barman_2.3-2/postrm</li>
+      <li>/corpus/bacula-console_9.0.8-1/postrm</li>
+      <li>/corpus/bacula-console-qt_9.0.8-1/postrm</li>
+      <li>/corpus/bacula-director_9.0.8-1/postrm</li>
+      <li>/corpus/bacula-fd_9.0.8-1/postrm</li>
+      <li>/corpus/bacula-sd_9.0.8-1/postrm</li>
+      <li>/corpus/babeld_1.8.2-1/postrm</li>
+      <li>/corpus/awstats_7.6+dfsg-2/postrm</li>
+      <li>/corpus/autodeb-server_0.20.0-1/postrm</li>
+      <li>/corpus/autodeb-worker_0.20.0-1/postrm</li>
+      <li>/corpus/autodir_0.99.9-10+b1/postrm</li>
+      <li>/corpus/asunder_2.9.3-2/postrm</li>
+      <li>/corpus/arpon_3.0-ng+dfsg1-2/postrm</li>
+      <li>/corpus/apt-offline_1.8.1/postrm</li>
+      <li>/corpus/aptly-api_1.3.0-6/postrm</li>
+      <li>/corpus/android-androresolvd_1.3-1+b1/postrm</li>
+      <li>/corpus/apacheds_2.0.0~M24-1/postrm</li>
+      <li>/corpus/apertium-apy_0.11.3-1/postrm</li>
+      <li>/corpus/apf-firewall_9.7+rev1-5.1/postrm</li>
+      <li>/corpus/ahcpd_0.53-2+b1/postrm</li>
+    </ul>
+  </body>
+</html>

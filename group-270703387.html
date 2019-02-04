@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>33</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₅
+  cwd: /
+  clause: r₁ = r₅ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;install&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/ptex-jtex_1.7+1-15/preinst</li>
+      <li>/corpus/crafty-books-medium_1.0.debian1-2/preinst</li>
+      <li>/corpus/crafty-books-medtosmall_1.0.debian1-2/preinst</li>
+      <li>/corpus/crafty-books-small_1.0.debian1-2/preinst</li>
+      <li>/corpus/yaws_2.0.6+dfsg-1/preinst</li>
+      <li>/corpus/xsoldier_1:1.8-5/preinst</li>
+      <li>/corpus/xfireworks_1.3-10+b1/preinst</li>
+      <li>/corpus/vtgrab_0.1.8-3+b1/preinst</li>
+      <li>/corpus/tiger_1:3.2.4~rc1-1/preinst</li>
+      <li>/corpus/sgmltools-lite_3.0.3.0.cvs.20010909-20/preinst</li>
+      <li>/corpus/t1-cyrillic_4.17/preinst</li>
+      <li>/corpus/t1-oldslavic_4.17/preinst</li>
+      <li>/corpus/t1-teams_4.17/preinst</li>
+      <li>/corpus/samhain_4.1.4-2+b1/preinst</li>
+      <li>/corpus/rplay-server_3.3.2-16+b2/preinst</li>
+      <li>/corpus/radiusd-livingston_2.1-21+b1/preinst</li>
+      <li>/corpus/r-base-dev_3.5.1-1/preinst</li>
+      <li>/corpus/r-doc-html_3.5.1-1/preinst</li>
+      <li>/corpus/r-doc-pdf_3.5.1-1/preinst</li>
+      <li>/corpus/r-recommended_3.5.1-1/preinst</li>
+      <li>/corpus/libquantlib0-dev_1.13-1/preinst</li>
+      <li>/corpus/policykit-1_0.105-21/preinst</li>
+      <li>/corpus/lam4-dev_7.1.4-3.1/preinst</li>
+      <li>/corpus/ibod_1.5.0-6+b1/preinst</li>
+      <li>/corpus/libgretl1-dev_2018b-1/preinst</li>
+      <li>/corpus/ghc_8.2.2-6/preinst</li>
+      <li>/corpus/filler_1.02-6.2/preinst</li>
+      <li>/corpus/cups-bsd_2.2.8-5/preinst</li>
+      <li>/corpus/cups-client_2.2.8-5/preinst</li>
+      <li>/corpus/libcups2-dev_2.2.8-5/preinst</li>
+      <li>/corpus/libcupsimage2_2.2.8-5/preinst</li>
+      <li>/corpus/libcupsimage2-dev_2.2.8-5/preinst</li>
+      <li>/corpus/cricket_1.0.5-22/preinst</li>
+    </ul>
+  </body>
+</html>

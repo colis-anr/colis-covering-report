@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>88</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₁₃
+  cwd: /
+  clause: r₁ = r₁₃ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;remove&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;disappear&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;purge&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;failed-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-install&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/maple-latex_0.0.1-7/postrm</li>
+      <li>/corpus/writer2latex_1.4-5/postrm</li>
+      <li>/corpus/whizzytex_1.3.2-1.4/postrm</li>
+      <li>/corpus/libwhy3-ocaml-dev_1.0.0-2/postrm</li>
+      <li>/corpus/why3_1.0.0-2/postrm</li>
+      <li>/corpus/why3-coq_1.0.0-2/postrm</li>
+      <li>/corpus/why3-doc-html_1.0.0-2/postrm</li>
+      <li>/corpus/why3-doc-pdf_1.0.0-2/postrm</li>
+      <li>/corpus/why3-examples_1.0.0-2/postrm</li>
+      <li>/corpus/texlive-lang-korean_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-latex-base-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-latex-recommended_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-latex-recommended-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-luatex_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-metapost_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-metapost-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-pictures_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-pictures-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-games_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-bibtex-extra_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-extra-utils_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-font-utils_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-fonts-extra_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-fonts-extra-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-fonts-extra-links_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-humanities_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-humanities-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-latex-extra_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-latex-extra-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-music_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-plain-generic_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-pstricks_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-pstricks-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-publishers_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-publishers-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-science_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-science-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-lang-all_2018.20180824-1/postrm</li>
+      <li>/corpus/tetex-brev_4.22.github.20140417-3/postrm</li>
+      <li>/corpus/texlive-fonts-recommended_2018.20180824-1/postrm</li>
+      <li>/corpus/texlive-fonts-recommended-doc_2018.20180824-1/postrm</li>
+      <li>/corpus/sgf2dg_4.026-10+b2/postrm</li>
+      <li>/corpus/scalable-cyrfonts-tex_4.17/postrm</li>
+      <li>/corpus/python-sagetex_3.0+ds-6/postrm</li>
+      <li>/corpus/sagetex_3.0+ds-6/postrm</li>
+      <li>/corpus/sagetex-doc_3.0+ds-6/postrm</li>
+      <li>/corpus/jbibtex-base_1:2.5-3/postrm</li>
+      <li>/corpus/ptex-base_1:2.5-3/postrm</li>
+      <li>/corpus/ocamlweb_1.40-1/postrm</li>
+      <li>/corpus/noweb_2.11b-11+b1/postrm</li>
+      <li>/corpus/maxima-doc_5.41.0-3/postrm</li>
+      <li>/corpus/maxima-emacs_5.41.0-3/postrm</li>
+      <li>/corpus/maxima-share_5.41.0-3/postrm</li>
+      <li>/corpus/maxima-src_5.41.0-3/postrm</li>
+      <li>/corpus/maxima-test_5.41.0-3/postrm</li>
+      <li>/corpus/lyx-common_2.3.0-2/postrm</li>
+      <li>/corpus/lhs2tex_1.20-1/postrm</li>
+      <li>/corpus/latex-coffee-stains_5-2/postrm</li>
+      <li>/corpus/latex-make_2.2.4-1/postrm</li>
+      <li>/corpus/latex209-base_25.mar.1992-17/postrm</li>
+      <li>/corpus/latexml_0.8.3-1/postrm</li>
+      <li>/corpus/hevea_2.32-1/postrm</li>
+      <li>/corpus/fweb-doc_1.62-13/postrm</li>
+      <li>/corpus/context-modules_20180404-2/postrm</li>
+      <li>/corpus/latex-cjk-common_4.8.4+git20170127-2/postrm</li>
+      <li>/corpus/latex-cjk-japanese_4.8.4+git20170127-2/postrm</li>
+      <li>/corpus/latex-cjk-korean_4.8.4+git20170127-2/postrm</li>
+      <li>/corpus/biber_2.11-2/postrm</li>
+      <li>/corpus/bibtool_2.67+ds-5/postrm</li>
+      <li>/corpus/axiom-databases_20170501-3/postrm</li>
+      <li>/corpus/axiom-doc_20170501-3/postrm</li>
+      <li>/corpus/axiom-graphics-data_20170501-3/postrm</li>
+      <li>/corpus/axiom-hypertex-data_20170501-3/postrm</li>
+      <li>/corpus/axiom-source_20170501-3/postrm</li>
+      <li>/corpus/axiom-test_20170501-3/postrm</li>
+      <li>/corpus/axiom-tex_20170501-3/postrm</li>
+      <li>/corpus/auto-multiple-choice-common_1.4.0~rc1-2/postrm</li>
+      <li>/corpus/asymptote_2.44-1+b1/postrm</li>
+      <li>/corpus/preview-latex-style_11.91-1/postrm</li>
+      <li>/corpus/acl2-books-certs_8.0dfsg-1/postrm</li>
+      <li>/corpus/acl2-books-source_8.0dfsg-1/postrm</li>
+      <li>/corpus/acl2-doc_8.0dfsg-1/postrm</li>
+      <li>/corpus/acl2-emacs_8.0dfsg-1/postrm</li>
+      <li>/corpus/acl2-infix_8.0dfsg-1/postrm</li>
+      <li>/corpus/acl2-infix-source_8.0dfsg-1/postrm</li>
+      <li>/corpus/acl2-source_8.0dfsg-1/postrm</li>
+      <li>/corpus/advi_1.10.2-3+b1/postrm</li>
+      <li>/corpus/advi-examples_1.10.2-3/postrm</li>
+    </ul>
+  </body>
+</html>

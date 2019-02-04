@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>14</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₅
+  cwd: /
+  clause: r₁ = r₅ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test &apos;&apos; = &apos;abort-upgrade&apos;: string are not equal
+    
+* Summary
+
+- Success cases: 1
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/tvoe_0.1-1+b2/postinst</li>
+      <li>/corpus/tircd_0.30-4/postinst</li>
+      <li>/corpus/tarantool-lts-common_1.5.5.37.g1687c02-1/postinst</li>
+      <li>/corpus/spamass-milter_0.4.0-1+b1/postinst</li>
+      <li>/corpus/sm-archive_1.7-1+b2/postinst</li>
+      <li>/corpus/rtpproxy_1.2.1-2.2/postinst</li>
+      <li>/corpus/rplay-server_3.3.2-16+b2/postinst</li>
+      <li>/corpus/rbldnsd_0.998b~pre1-1/postinst</li>
+      <li>/corpus/radicale_1.1.6-1/postinst</li>
+      <li>/corpus/onioncat_0.2.2+svn569-2/postinst</li>
+      <li>/corpus/ffproxy_1.6-11+b1/postinst</li>
+      <li>/corpus/dnsproxy_1.16-0.1+b3/postinst</li>
+      <li>/corpus/deluged_1.3.15-2/postinst</li>
+      <li>/corpus/caml-crush-server_1.0.8-1+b1/postinst</li>
+    </ul>
+  </body>
+</html>

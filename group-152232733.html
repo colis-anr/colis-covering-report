@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoLiS-Language Covering</title>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+	  width: 80%;
+	  margin: auto;
+      }
+      table {
+	  width: 100%;
+      }
+      table#summary tbody {
+	  height: 500px;
+      }
+      table#summary td {
+	  text-align: center;
+      }
+      table#summary td.success {
+	  background: #afa;
+      }
+      table#summary td.error {
+	  background: #faa;
+      }
+      th, table#summary td.empty {
+	  background: #ddd;
+      }
+      table#details td {
+	  vertical-align: top;
+	  text-align: left;
+      }
+      table#details tbody {
+	  border-bottom: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoLiS-Language Covering</h1>
+
+    <dl>
+      <dt>Status</dt>
+      <dd>Exited 0</dd>
+
+      <dt>Number of files</dt>
+      <dd>1</dd>
+    </dl>
+
+    <h2>stdout</h2>
+    <pre>* Initial state
+- id: init-0
+  root: r₁
+  cwd: /
+  clause: dir(r₁)
+  
+* Success states
+- id: success-1
+  root: r₃
+  cwd: /
+  clause: r₁ = r₃ ∧ r₁[etc]↑ ∧ dir(r₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test -f /etc/fwupd/daemon.conf: path does not resolve
+    
+- id: success-2
+  root: r₃
+  cwd: /
+  clause: ∃ fwupd₁₆, etc₂₀⋅ r₁ = r₃ ∧ r₁[etc]etc₂₀ ∧ etc₂₀[fwupd]fwupd₁₆ ∧ dir(r₁) ∧ reg(fwupd₁₆) ∧ dir(etc₂₀) ∧ fwupd₁₆[∅]
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test -f /etc/fwupd/daemon.conf: path does not resolve
+    
+- id: success-3
+  root: r₃
+  cwd: /
+  clause: ∃ fwupd₁₇, etc₂₁⋅ r₁ = r₃ ∧ r₁[etc]etc₂₁ ∧ etc₂₁[fwupd]fwupd₁₇ ∧ fwupd₁₇[daemon.conf]↑ ∧ dir(r₁) ∧ dir(fwupd₁₇) ∧ dir(etc₂₁)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test -f /etc/fwupd/daemon.conf: path does not resolve
+    
+- id: success-4
+  root: r₃
+  cwd: /
+  clause: ∃ etc₁₈⋅ r₁ = r₃ ∧ r₁[etc]etc₁₈ ∧ dir(r₁) ∧ reg(etc₁₈) ∧ etc₁₈[∅]
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test -f /etc/fwupd/daemon.conf: path does not resolve
+    
+- id: success-5
+  root: r₃
+  cwd: /
+  clause: ∃ etc₁₉⋅ r₁ = r₃ ∧ r₁[etc]etc₁₉ ∧ etc₁₉[fwupd]↑ ∧ dir(r₁) ∧ dir(etc₁₉)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test -f /etc/fwupd/daemon.conf: path does not resolve
+    
+- id: success-6
+  root: r₃
+  cwd: /
+  clause: ∃ fwupd₃₂, etc₃₃, daemon.conf₃₄⋅ r₁ = r₃ ∧ r₁[etc]etc₃₃ ∧ fwupd₃₂[daemon.conf]daemon.conf₃₄ ∧ etc₃₃[fwupd]fwupd₃₂ ∧ dir(r₁) ∧ dir(daemon.conf₃₄)
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test -f /etc/fwupd/daemon.conf: path resolves but not to a regular file
+    
+- id: success-7
+  root: r₃₆
+  cwd: /
+  clause: ∃ fwupd₉, etc₁₀, daemon.conf₁₁⋅ r₁ = r₃₆ ∧ r₁[etc]etc₁₀ ∧ fwupd₉[daemon.conf]daemon.conf₁₁ ∧ etc₁₀[fwupd]fwupd₉ ∧ dir(r₁) ∧ reg(daemon.conf₁₁) ∧ daemon.conf₁₁[∅]
+  stdout: |
+    [UTL] test &apos;&apos; = &apos;configure&apos;: string are not equal
+    [UTL] test -f /etc/fwupd/daemon.conf: path resolves to a regular file
+    [UTL] test &apos;&apos; = &apos;true&apos;: string are not equal
+    To enable test suite, modify /etc/fwupd/daemon.conf
+    
+* Summary
+
+- Success cases: 7
+- Error cases: 0
+- Incomplete symbolic execution: 0
+</pre>
+
+    <h2>stderr</h2>
+    <pre></pre>
+
+    <h2>Files</h2>
+    <ul>
+      <li>/corpus/fwupd-tests_1.1.1-1/postinst</li>
+    </ul>
+  </body>
+</html>
