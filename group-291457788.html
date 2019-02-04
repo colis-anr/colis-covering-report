@@ -54,7 +54,6 @@
   cwd: /
   clause: dir(r₁)
   
-
 * Success states
 - id: success-1
   root: r₂
@@ -70,55 +69,54 @@
   stdout: |
     [UTL] touch /var/lib/sntp/kod: create file
     
-
-* Failure states
-- id: failure-1
+* Error states
+- id: error-1
   root: r₂
   cwd: /
   clause: r₁ = r₂ ∧ r₁[var]↑ ∧ dir(r₁)
   stdout: |
     [UTL] touch /var/lib/sntp/kod: parent path does not resolve
     
-- id: failure-2
+- id: error-2
   root: r₂
   cwd: /
   clause: ∃ lib₁₆, var₂₀⋅ r₁ = r₂ ∧ r₁[var]var₂₀ ∧ var₂₀[lib]lib₁₆ ∧ dir(r₁) ∧ reg(lib₁₆) ∧ dir(var₂₀) ∧ lib₁₆[∅]
   stdout: |
     [UTL] touch /var/lib/sntp/kod: parent path does not resolve
     
-- id: failure-3
+- id: error-3
   root: r₂
   cwd: /
   clause: ∃ lib₁₇, var₂₁⋅ r₁ = r₂ ∧ r₁[var]var₂₁ ∧ var₂₁[lib]lib₁₇ ∧ lib₁₇[sntp]↑ ∧ dir(r₁) ∧ dir(lib₁₇) ∧ dir(var₂₁)
   stdout: |
     [UTL] touch /var/lib/sntp/kod: parent path does not resolve
     
-- id: failure-4
+- id: error-4
   root: r₂
   cwd: /
   clause: ∃ var₁₈⋅ r₁ = r₂ ∧ r₁[var]var₁₈ ∧ dir(r₁) ∧ reg(var₁₈) ∧ var₁₈[∅]
   stdout: |
     [UTL] touch /var/lib/sntp/kod: parent path does not resolve
     
-- id: failure-5
+- id: error-5
   root: r₂
   cwd: /
   clause: ∃ var₁₉⋅ r₁ = r₂ ∧ r₁[var]var₁₉ ∧ var₁₉[lib]↑ ∧ dir(r₁) ∧ dir(var₁₉)
   stdout: |
     [UTL] touch /var/lib/sntp/kod: parent path does not resolve
     
-- id: failure-6
+- id: error-6
   root: r₂
   cwd: /
   clause: ∃ lib₅₁, var₅₂, sntp₅₃⋅ r₁ = r₂ ∧ r₁[var]var₅₂ ∧ lib₅₁[sntp]sntp₅₃ ∧ var₅₂[lib]lib₅₁ ∧ dir(r₁) ∧ reg(sntp₅₃) ∧ sntp₅₃[∅]
   stdout: |
     [UTL] touch /var/lib/sntp/kod: parent path is not directory
     
-
 * Summary
 
 - Success cases: 2
 - Error cases: 6
+- Incomplete symbolic execution: 0
 </pre>
 
     <h2>stderr</h2>
